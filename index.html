@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suit Gallery Clothing House | এলিফ্যান্ট রোডের সেরা ৩-পিস স্যুট ও ব্লেজার কালেকশন</title>
+  <meta name="description" content="Suit Gallery Clothing House - নিউ এলিফ্যান্ট রোডের সেরা ৩-পিস স্যুট (কোট + ওয়েস্টকোট + ট্রাউজার) মাত্র ৩,৫০০ টাকায়! প্রিমিয়াম সুটিং ফেব্রিক ও পারফেক্ট ফিটিং।">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: #0f1420;
+      --bg-card-hover: #161e30;
+      --accent-gold: #eab308;
+      --gold-gradient: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+      --accent-blue: #2563eb;
+      --accent-green: #22c55e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: rgba(234, 179, 8, 0.2);
+      --font-bn: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-bn);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: linear-gradient(90deg, #991b1b, #b91c1c, #991b1b);
+      color: #fff;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .top-bar span {
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.02); }
+    }
+
+    /* Header */
+    header {
+      background: rgba(15, 20, 32, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(234, 179, 8, 0.15);
+      position: sticky;
+      top: 36px;
+      z-index: 90;
+      padding: 12px 16px;
+    }
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-gold);
+      box-shadow: 0 0 15px rgba(234, 179, 8, 0.3);
+      object-fit: cover;
+    }
+    .brand-text h1 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+    .brand-text p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-header-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: rgba(234, 179, 8, 0.1);
+      color: var(--accent-gold);
+      border: 1px solid rgba(234, 179, 8, 0.3);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-header-call:hover {
+      background: var(--accent-gold);
+      color: #000;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 36px 0 24px;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(234, 179, 8, 0.12) 0%, transparent 70%);
+      filter: blur(40px);
+      z-index: -1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 30px;
+      background: rgba(234, 179, 8, 0.1);
+      border: 1px solid rgba(234, 179, 8, 0.3);
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .hero-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+    .hero-title .gold {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .hero-offer-box {
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.12) 0%, rgba(15, 20, 32, 0.8) 100%);
+      border: 1px solid rgba(234, 179, 8, 0.35);
+      border-radius: 16px;
+      padding: 16px 20px;
+      max-width: 550px;
+      margin: 0 auto 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .hero-offer-box .offer-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .hero-offer-box .regular-price {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+    .hero-offer-box .offer-desc {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      margin-top: 4px;
+    }
+
+    /* Trust Pills */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+    @media (min-width: 640px) {
+      .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .trust-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      text-align: center;
+    }
+    .trust-pill .icon {
+      font-size: 1.2rem;
+    }
+
+    /* Section Heading */
+    .section-head {
+      text-align: center;
+      margin: 36px 0 20px;
+    }
+    .section-head h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .section-head p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Category Filter */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .tab-btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-bn);
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--accent-gold);
+      color: #07090e;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 15px rgba(234, 179, 8, 0.3);
+    }
+
+    /* Products Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 640px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.6), 0 0 20px rgba(234, 179, 8, 0.15);
+    }
+    .card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(7, 9, 14, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      z-index: 10;
+      letter-spacing: 0.5px;
+    }
+    .img-wrap {
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      cursor: pointer;
+    }
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .img-wrap img {
+      transform: scale(1.04);
+    }
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      pointer-events: none;
+    }
+
+    .card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    .card-details {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .piece-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .piece-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .card-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(255,255,255,0.1);
+    }
+    .price-group {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .current-price {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+    .old-price {
+      font-size: 0.9rem;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+    .save-badge {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    /* Size Selector */
+    .size-selector-label {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .size-btn-group {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .size-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-bn);
+    }
+    .size-chip:hover {
+      border-color: var(--accent-gold);
+      color: #fff;
+    }
+    .size-chip.selected {
+      background: var(--accent-gold);
+      color: #07090e;
+      border-color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    /* CTA Button */
+    .btn-wa-order {
+      background: #16a34a;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-bn);
+      margin-top: auto;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+    }
+    .btn-wa-order:hover {
+      background: #15803d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
+    }
+
+    /* Video Section */
+    .video-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 24px 18px;
+      margin: 40px auto;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-top: 16px;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Size Chart Table */
+    .size-chart-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 22px 16px;
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.85rem;
+    }
+    .size-table th, .size-table td {
+      padding: 10px 12px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .size-table th {
+      background: rgba(234, 179, 8, 0.1);
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+    .size-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Showroom Card */
+    .showroom-box {
+      background: linear-gradient(145deg, #101726, #090d15);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 28px 20px;
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+    .showroom-box h3 {
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .showroom-address {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+    .showroom-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .contact-badge:hover {
+      border-color: var(--accent-gold);
+      background: rgba(234, 179, 8, 0.1);
+      color: var(--accent-gold);
+    }
+
+    /* Demo Notice Box */
+    .demo-notice {
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      border-radius: 14px;
+      padding: 16px;
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #93c5fd;
+    }
+    .demo-notice strong {
+      color: #bfdbfe;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 16px;
+      color: #64748b;
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    /* Sticky Bottom Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 20, 32, 0.98);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(234, 179, 8, 0.25);
+      padding: 10px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
+    }
+    .sticky-bar a {
+      flex: 1;
+      padding: 12px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-bn);
+    }
+    .btn-sticky-call {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-sticky-wa {
+      background: #16a34a;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(22, 163, 74, 0.4);
+    }
+
+    /* Fullscreen Lightbox */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .lightbox-modal.active {
+      display: flex;
+    }
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(234, 179, 8, 0.3);
+      position: relative;
+    }
+    .lightbox-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>🔥 ধামাকা উইন্টার ও ওয়েডিং অফার: কমপ্লিট ৩-পিস স্যুট মাত্র ৩,৫০০ টাকা! | শোরুম ট্রায়াল ও সারা দেশে হোম ডেলিভারি 🚚</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="brand-wrap">
+        <img src="images/logo_badge.webp" alt="Suit Gallery Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <h1>SUIT GALLERY</h1>
+          <p>CLOTHING HOUSE • NEW ELEPHANT ROAD</p>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="tel:01778855772" class="btn-header-call">
+          📞 01778-855772
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-badge">✨ ELEPHANT ROAD'S PREMIER 3-PIECE SUIT HUB</div>
+      <h2 class="hero-title">
+        রাজকীয় আভিজাত্য ও পারফেক্ট ফিটিংয়ে<br>
+        <span class="gold">প্রিমিয়াম ৩-পিস স্যুট কালেকশন</span>
+      </h2>
+      <p class="hero-sub">
+        কর্পোরেট মিটিং, অফিসিয়াল প্রেজেন্টেশন কিংবা বিয়ের জমকালো আয়োজন—প্রতিটি অনুষ্ঠানে আপনার ব্যক্তিত্বকে ফুটিয়ে তুলুন শতভাগ প্রিমিয়াম ৩-পিস স্যুটে।
+      </p>
+
+      <!-- Offer Box -->
+      <div class="hero-offer-box">
+        <div class="offer-price">
+          <span>৳৩,৫০০</span>
+          <span class="regular-price">৳৪,৫০০</span>
+          <span class="save-badge">৳১,০০০ সাশ্রয়!</span>
+        </div>
+        <p class="offer-desc">
+          🎯 <strong>কমপ্লিট সেট:</strong> ব্লেজার কোট + ম্যাচিং ওয়েস্টকোট (ভেস্ট) + ফর্মাল ট্রাউজার
+        </p>
+      </div>
+
+      <!-- Trust Grid -->
+      <div class="trust-grid">
+        <div class="trust-pill">
+          <span class="icon">💎</span>
+          <span>১০০% প্রিমিয়াম সুটিং ফেব্রিক</span>
+        </div>
+        <div class="trust-pill">
+          <span class="icon">✂️</span>
+          <span>রেডিমেড ও কাস্টম ফিটিং</span>
+        </div>
+        <div class="trust-pill">
+          <span class="icon">📏</span>
+          <span>৩৬-৪৬ সব সাইজ রেডি</span>
+        </div>
+        <div class="trust-pill">
+          <span class="icon">🏬</span>
+          <span>শোরুমে ট্রায়াল সুবিধা</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Heading -->
+    <div class="section-head" id="collection">
+      <h2>👔 হট সেলিং ৩-পিস স্যুট কালেকশন</h2>
+      <p>পছন্দের স্যুট ও সাইজ বেছে নিয়ে সরাসরি ১-ক্লিকে হোয়াটসঅ্যাপে মেমো পাঠান</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterSuits('all')">সকল কালেকশন (৫)</button>
+      <button class="tab-btn" onclick="filterSuits('wedding')">ওয়েডিং ও পার্টি</button>
+      <button class="tab-btn" onclick="filterSuits('corporate')">অফিস ও কর্পোরেট</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+
+      <!-- Product 1: Executive Grey -->
+      <article class="product-card" data-category="corporate all">
+        <div class="card-badge">👑 BESTSELLER</div>
+        <div class="img-wrap" onclick="openLightbox('images/suit_grey.webp')">
+          <img src="images/suit_grey.webp" alt="Executive Grey 3-Piece Suit" loading="lazy">
+          <div class="zoom-hint">🔍 ক্লিক করে বড় দেখুন</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Executive Grey 3-Piece Suit</h3>
+          <p class="card-details">
+            প্রিমিয়াম অ্যাশ/গ্রে ট্রিপল পিস স্যুট সেট। কর্পোরেট মিটিং, প্রেজেন্টেশন ও সোশ্যাল পার্টিতে সবচেয়ে এলিগ্যান্ট ও ডিসেন্ট লুক।
+          </p>
+          <div class="piece-tags">
+            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
+            <span class="piece-tag">✓ ১x ম্যাচিং ওয়েস্টকোট</span>
+            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
+          </div>
+
+          <div class="card-price-row">
+            <div class="price-group">
+              <span class="current-price">৳৩,৫০০</span>
+              <span class="old-price">৳৪,৫০০</span>
+            </div>
+            <span class="save-badge">৳১,০০০ অফ</span>
+          </div>
+
+          <div class="size-selector-label">
+            <span>আপনার সাইজ নির্বাচন করুন:</span>
+            <span id="selected-size-1" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
+          </div>
+          <div class="size-btn-group" data-product="Executive Grey 3-Piece Suit" data-display="selected-size-1">
+            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
+            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
+            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
+            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
+            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
+            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
+          </div>
+
+          <button class="btn-wa-order" onclick="orderOnWhatsApp('Executive Grey 3-Piece Suit', 'selected-size-1')">
+            💬 হোয়াটসঅ্যাপে অর্ডার করুন
+          </button>
+        </div>
+      </article>
+
+      <!-- Product 2: Deep Wine / Maroon -->
+      <article class="product-card" data-category="wedding all">
+        <div class="card-badge">✨ WEDDING SPECIAL</div>
+        <div class="img-wrap" onclick="openLightbox('images/suit_maroon.webp')">
+          <img src="images/suit_maroon.webp" alt="Deep Maroon Wedding 3-Piece Suit" loading="lazy">
+          <div class="zoom-hint">🔍 ক্লিক করে বড় দেখুন</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Deep Maroon / Wine 3-Piece Suit</h3>
+          <p class="card-details">
+            জমকালো ডিপ ওয়াইন ট্রিপল পিস সেট। বিয়ের রিসেপশন, গায়ে হলুদ ও স্পেশাল নাইট ইভেন্টে আভিজাত্যের সেরা প্রতীক।
+          </p>
+          <div class="piece-tags">
+            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
+            <span class="piece-tag">✓ ১x ম্যাচিং ওয়েস্টকোট</span>
+            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
+          </div>
+
+          <div class="card-price-row">
+            <div class="price-group">
+              <span class="current-price">৳৩,৫০০</span>
+              <span class="old-price">৳৪,৫০০</span>
+            </div>
+            <span class="save-badge">৳১,০০০ অফ</span>
+          </div>
+
+          <div class="size-selector-label">
+            <span>আপনার সাইজ নির্বাচন করুন:</span>
+            <span id="selected-size-2" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
+          </div>
+          <div class="size-btn-group" data-product="Deep Maroon Wedding 3-Piece Suit" data-display="selected-size-2">
+            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
+            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
+            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
+            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
+            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
+            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
+          </div>
+
+          <button class="btn-wa-order" onclick="orderOnWhatsApp('Deep Maroon / Wine Wedding 3-Piece Suit', 'selected-size-2')">
+            💬 হোয়াটসঅ্যাপে অর্ডার করুন
+          </button>
+        </div>
+      </article>
+
+      <!-- Product 3: Classic Jet Black -->
+      <article class="product-card" data-category="corporate wedding all">
+        <div class="card-badge">⭐ FORMAL ICON</div>
+        <div class="img-wrap" onclick="openLightbox('images/suit_black.webp')">
+          <img src="images/suit_black.webp" alt="Classic Jet Black 3-Piece Suit" loading="lazy">
+          <div class="zoom-hint">🔍 ক্লিক করে বড় দেখুন</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Classic Jet Black 3-Piece Suit</h3>
+          <p class="card-details">
+            রাজকীয় ডিপ ব্ল্যাক ট্রিপল পিস সেট। প্রতিটি পুরুষের ওয়ার্ডরোবে থাকা সবচেয়ে আবশ্যক এভারগ্রিন ফর্মাল মাস্টারপিস।
+          </p>
+          <div class="piece-tags">
+            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
+            <span class="piece-tag">✓ ১x ম্যাচিং ওয়েস্টকোট</span>
+            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
+          </div>
+
+          <div class="card-price-row">
+            <div class="price-group">
+              <span class="current-price">৳৩,৫০০</span>
+              <span class="old-price">৳৪,৫০০</span>
+            </div>
+            <span class="save-badge">৳১,০০০ অফ</span>
+          </div>
+
+          <div class="size-selector-label">
+            <span>আপনার সাইজ নির্বাচন করুন:</span>
+            <span id="selected-size-3" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
+          </div>
+          <div class="size-btn-group" data-product="Classic Jet Black 3-Piece Suit" data-display="selected-size-3">
+            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
+            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
+            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
+            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
+            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
+            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
+          </div>
+
+          <button class="btn-wa-order" onclick="orderOnWhatsApp('Classic Jet Black 3-Piece Suit', 'selected-size-3')">
+            💬 হোয়াটসঅ্যাপে অর্ডার করুন
+          </button>
+        </div>
+      </article>
+
+      <!-- Product 4: Midnight Navy -->
+      <article class="product-card" data-category="corporate all">
+        <div class="card-badge">💼 EXECUTIVE CHOICE</div>
+        <div class="img-wrap" onclick="openLightbox('images/suit_navy.webp')">
+          <img src="images/suit_navy.webp" alt="Midnight Navy 3-Piece Suit" loading="lazy">
+          <div class="zoom-hint">🔍 ক্লিক করে বড় দেখুন</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Midnight Navy 3-Piece Suit</h3>
+          <p class="card-details">
+            প্রিমিয়াম মিডনাইট নেভি ব্লু ট্রিপল পিস সেট। স্মার্ট বিজনেস এক্সিকিউটিভ ও ইন্টারভিউ/অফিসিয়াল মিটিংয়ে পারফেক্ট আভিজাত্য।
+          </p>
+          <div class="piece-tags">
+            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
+            <span class="piece-tag">✓ ১x ম্যাচিং ওয়েস্টকোট</span>
+            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
+          </div>
+
+          <div class="card-price-row">
+            <div class="price-group">
+              <span class="current-price">৳৩,৫০০</span>
+              <span class="old-price">৳৪,৫০০</span>
+            </div>
+            <span class="save-badge">৳১,০০০ অফ</span>
+          </div>
+
+          <div class="size-selector-label">
+            <span>আপনার সাইজ নির্বাচন করুন:</span>
+            <span id="selected-size-4" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
+          </div>
+          <div class="size-btn-group" data-product="Midnight Navy 3-Piece Suit" data-display="selected-size-4">
+            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
+            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
+            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
+            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
+            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
+            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
+          </div>
+
+          <button class="btn-wa-order" onclick="orderOnWhatsApp('Midnight Navy 3-Piece Suit', 'selected-size-4')">
+            💬 হোয়াটসঅ্যাপে অর্ডার করুন
+          </button>
+        </div>
+      </article>
+
+      <!-- Product 5: Royal Sapphire Blue -->
+      <article class="product-card" data-category="wedding all">
+        <div class="card-badge">💎 ROYAL EDITION</div>
+        <div class="img-wrap" onclick="openLightbox('images/suit_royalblue.webp')">
+          <img src="images/suit_royalblue.webp" alt="Royal Sapphire Blue 3-Piece Suit" loading="lazy">
+          <div class="zoom-hint">🔍 ক্লিক করে বড় দেখুন</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Royal Sapphire Blue 3-Piece Suit</h3>
+          <p class="card-details">
+            আই-ক্যাচিং রয়্যাল ব্লু ট্রিপল পিস সেট। ডেলাইট ওয়েডিং ইভেন্ট, ভাইব্রেন্ট পার্টি ও ফটোশুটে সবচেয়ে আকর্ষণীয় লুক এনে দেবে।
+          </p>
+          <div class="piece-tags">
+            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
+            <span class="piece-tag">✓ ১x ম্যাচিং ওয়েস্টকোট</span>
+            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
+          </div>
+
+          <div class="card-price-row">
+            <div class="price-group">
+              <span class="current-price">৳৩,৫০০</span>
+              <span class="old-price">৳৪,৫০০</span>
+            </div>
+            <span class="save-badge">৳১,০০০ অফ</span>
+          </div>
+
+          <div class="size-selector-label">
+            <span>আপনার সাইজ নির্বাচন করুন:</span>
+            <span id="selected-size-5" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
+          </div>
+          <div class="size-btn-group" data-product="Royal Sapphire Blue 3-Piece Suit" data-display="selected-size-5">
+            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
+            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
+            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
+            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
+            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
+            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
+          </div>
+
+          <button class="btn-wa-order" onclick="orderOnWhatsApp('Royal Sapphire Blue 3-Piece Suit', 'selected-size-5')">
+            💬 হোয়াটসঅ্যাপে অর্ডার করুন
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- YouTube Showroom Review Feature -->
+    <section class="video-section">
+      <div class="section-head" style="margin-top: 0;">
+        <h2>🎥 শোরুম ভিজিট ও ফেব্রিক রিভিউ</h2>
+        <p>Shopnil Vlogs-এর অফিসিয়াল শোরুম রিভিউ ও স্যুট কালেকশন দেখে নিন</p>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/-Q5veJiLvPw?rel=0" title="Suit Gallery Clothing House Showroom Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Size Chart Table -->
+    <section class="size-chart-box">
+      <div class="section-head" style="margin-top: 0;">
+        <h2>📏 সাইজ চার্ট ও পরিমাপ নির্দেশিকা</h2>
+        <p>আপনার শরীরের মাপ অনুযায়ী সঠিক সাইজ বেছে নিন (সব পরিমাপ ইঞ্চিতে)</p>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>সাইজ (Size)</th>
+              <th>ব্লেজার বুক (Chest)</th>
+              <th>কাঁধ (Shoulder)</th>
+              <th>হাতা (Sleeve)</th>
+              <th>প্যান্ট কোমর (Waist)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>36</strong></td>
+              <td>৩৬" - ৩৭"</td>
+              <td>১৭.৫"</td>
+              <td>২৩.৫"</td>
+              <td>৩০" - ৩১"</td>
+            </tr>
+            <tr>
+              <td><strong>38</strong></td>
+              <td>৩৮" - ৩৯"</td>
+              <td>১৮.০"</td>
+              <td>২৪.০"</td>
+              <td>৩২" - ৩৩"</td>
+            </tr>
+            <tr>
+              <td><strong>40</strong></td>
+              <td>৪০" - ৪১"</td>
+              <td>১৮.৫"</td>
+              <td>২৪.৫"</td>
+              <td>৩৪" - ৩৫"</td>
+            </tr>
+            <tr>
+              <td><strong>42</strong></td>
+              <td>৪২" - ৪৩"</td>
+              <td>১৯.০"</td>
+              <td>২৫.০"</td>
+              <td>৩৬" - ৩৭"</td>
+            </tr>
+            <tr>
+              <td><strong>44</strong></td>
+              <td>৪৪" - ৪৫"</td>
+              <td>১৯.৫"</td>
+              <td>২৫.৫"</td>
+              <td>৩৮" - ৩৯"</td>
+            </tr>
+            <tr>
+              <td><strong>46</strong></td>
+              <td>৪৬" - ৪৭"</td>
+              <td>২০.০"</td>
+              <td>২৬.০"</td>
+              <td>৪০" - ৪১"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.8rem; color: #94a3b8; text-align: center; margin-top: 12px;">
+        💡 <em>নোট: নিজস্ব বিশেষ মাপে বানাতে চাইলে আমাদের শোরুমে এসে ট্রায়াল বা নিজস্ব পরিমাপ পাঠাতে পারেন।</em>
+      </p>
+    </section>
+
+    <!-- Showroom & Contact Info -->
+    <section class="showroom-box">
+      <div class="hero-badge">📍 শোরুম সরাসরি ভিজিট করুন</div>
+      <h3>Suit Gallery Clothing House</h3>
+      <p class="showroom-address">
+        শপ নং ৫০/১৩ (গ্রাউন্ড ফ্লোর), হাজী জয়নাল ভবন,<br>
+        নিউ এলিফ্যান্ট রোড, ঢাকা-১২০৫।<br>
+        <span style="font-size: 0.85rem; color: var(--accent-gold);">প্রতিদিন সকাল ১০:০০ টা থেকে রাত ৯:০০ টা পর্যন্ত খোলা</span>
+      </p>
+      <div class="showroom-contacts">
+        <a href="tel:01778855772" class="contact-badge">
+          📞 01778-855772
+        </a>
+        <a href="tel:01874338852" class="contact-badge">
+          📞 01874-338852
+        </a>
+        <a href="https://wa.me/8801778855772" target="_blank" class="contact-badge" style="background: rgba(22, 163, 74, 0.2); border-color: rgba(22, 163, 74, 0.4); color: #4ade80;">
+          💬 হোয়াটসঅ্যাপ চ্যাট
+        </a>
+        <a href="https://web.facebook.com/SuiteGalleryClothingHouse/" target="_blank" class="contact-badge" style="background: rgba(37, 99, 235, 0.2); border-color: rgba(37, 99, 235, 0.4); color: #60a5fa;">
+          🌐 অফিসিয়াল ফেসবুক পেজ
+        </a>
+      </div>
+    </section>
+
+    <!-- CryptoWebBuild Live Demo Notice -->
+    <div class="demo-notice">
+      🚀 <strong>লাইভ ডেমো নোটিশ:</strong> এটি <strong>CryptoWebBuild</strong> কর্তৃক <strong>Suit Gallery Clothing House</strong>-এর জন্য প্রস্তুতকৃত ৩-দিনের সম্পূর্ণ ফ্রি টেস্ট ডেমো ওয়েবসাইট।<br>
+      ডিজাইন ও কনভার্সন সিস্টেম পছন্দ হলে আপনার নিজস্ব ডোমেইনে ফুল সেটআপ করে দেওয়া হবে। যোগাযোগ: <strong>01977052842</strong>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Suit Gallery Clothing House. সর্বস্বত্ব সংরক্ষিত।</p>
+    <p style="margin-top: 4px;">Powered & Designed by <a href="https://wa.me/8801977052842" target="_blank">CryptoWebBuild</a></p>
+  </footer>
+
+  <!-- Sticky Bottom Quick Action Bar -->
+  <div class="sticky-bar">
+    <a href="tel:01778855772" class="btn-sticky-call">
+      📞 সরাসরি কল দিন
+    </a>
+    <a href="https://wa.me/8801778855772" target="_blank" class="btn-sticky-wa">
+      💬 হোয়াটসঅ্যাপে অর্ডার
+    </a>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+  </div>
+
+  <script>
+    // Size selection handler
+    function selectSize(element, size) {
+      const parent = element.parentElement;
+      const displayId = parent.getAttribute('data-display');
+      
+      // Update active chip
+      parent.querySelectorAll('.size-chip').forEach(chip => chip.classList.remove('selected'));
+      element.classList.add('selected');
+      
+      // Update label
+      const displayElem = document.getElementById(displayId);
+      if (displayElem) {
+        displayElem.innerText = `Size: ${size}`;
+      }
+    }
+
+    // 1-Click WhatsApp Order Builder
+    function orderOnWhatsApp(productName, displayId) {
+      const displayElem = document.getElementById(displayId);
+      const sizeText = displayElem ? displayElem.innerText : 'Size: 38';
+      const cleanSize = sizeText.replace('Size: ', '');
+      
+      const message = `আসসালামু আলাইকুম Suit Gallery Clothing House,\n\nআমি আপনাদের ওয়েবসাইট থেকে অর্ডার করতে চাই:\n• প্রোডাক্ট: ${productName}\n• সাইজ: ${cleanSize}\n• অফার প্রাইস: ৩,৫০০ টাকা (কমপ্লিট ৩-পিস সেট)\n\nডেলিভারি কনফার্মেশন ও পেমেন্ট প্রসেস জানাবেন প্লিজ।`;
+      
+      const encodedMsg = encodeURIComponent(message);
+      const waUrl = `https://wa.me/8801778855772?text=${encodedMsg}`;
+      window.open(waUrl, '_blank');
+    }
+
+    // Category filter tabs
+    function filterSuits(category) {
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const catData = card.getAttribute('data-category');
+        if (category === 'all' || catData.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Fullscreen Lightbox
+    function openLightbox(src) {
+      const modal = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox');
+      modal.classList.remove('active');
+    }
+
+    // Escape key to close lightbox
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>
