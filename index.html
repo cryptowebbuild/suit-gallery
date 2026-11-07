@@ -3,28 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DEMO | Suit Gallery Clothing House — ৩-পিস স্যুট কালেকশন | New Elephant Road</title>
-  <meta name="description" content="Suit Gallery Clothing House-এর অফিসিয়াল ৩-দিনের ফ্রি টেস্ট ডেমো ওয়েবসাইট। কমপ্লিট ৩-পিস স্যুট মাত্র ৩,৫০০ টাকায়। Designed by CryptoWebBuild.">
+  <title>Suit Gallery Clothing House — Bespoke 3-Piece Menswear | New Elephant Road, Dhaka</title>
+  <meta name="description" content="Suit Gallery Clothing House — নিউ এলিফ্যান্ট রোডের সেরা ৩-পিস স্যুট কালেকশন (ব্লেজার কোট + ভেস্ট + ট্রাউজার) মাত্র ৩,৫০০ টাকায়। Designed & Developed by CryptoWebBuild.">
+  
+  <!-- Premium Editorial Fonts: Cormorant Garamond (Serif), Plus Jakarta Sans (Sans), Hind Siliguri (Bengali) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg-dark: #07090e;
-      --bg-card: #0e1422;
-      --bg-card-hover: #151d30;
-      --accent-gold: #f59e0b;
-      --accent-gold-light: #fef08a;
-      --gold-gradient: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
-      --accent-blue: #3b82f6;
-      --accent-green: #22c55e;
-      --accent-red: #ef4444;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: rgba(245, 158, 11, 0.22);
+      --bg-main: #07080b;
+      --bg-surface: #0e1015;
+      --bg-surface-elevated: #141720;
+      --bg-surface-hover: #1a1e2a;
+      
+      --accent-bronze: #c8a97e;
+      --accent-bronze-light: #dfcaa9;
+      --accent-bronze-dark: #9f8056;
+      --accent-bronze-glow: rgba(200, 169, 126, 0.25);
+      
+      --text-primary: #f5f6f9;
+      --text-secondary: #9aa1b0;
+      --text-tertiary: #606778;
+      
+      --border-hairline: rgba(200, 169, 126, 0.16);
+      --border-subtle: rgba(255, 255, 255, 0.07);
+      --border-active: rgba(200, 169, 126, 0.5);
+      
+      --wa-green: #10b981;
+      --wa-green-hover: #059669;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-bn: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-en: 'Outfit', sans-serif;
-      --font-serif: 'Playfair Display', Georgia, serif;
     }
 
     * {
@@ -34,652 +46,755 @@
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
       font-family: var(--font-bn);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      padding-bottom: 85px;
+      padding-bottom: 90px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     /* ========================================================
-       TOP DEMO ANNOUNCEMENT BAR (PROMINENT BACKLINK & NOTICE)
+       TOP DEMO TICKER & BACKLINK (HIGH DESIGN EDITORIAL)
        ======================================================== */
-    .demo-top-header {
-      background: linear-gradient(90deg, #1e1b4b 0%, #1e3a8a 50%, #1e1b4b 100%);
-      border-bottom: 2px solid var(--accent-gold);
-      color: #fff;
-      padding: 10px 14px;
-      font-size: 0.88rem;
+    .top-demo-ribbon {
+      background: #0b0d12;
+      border-bottom: 1px solid var(--border-hairline);
+      color: var(--text-secondary);
+      font-size: 0.76rem;
+      font-family: var(--font-sans);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 9px 16px;
       position: sticky;
       top: 0;
       z-index: 200;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
     }
-    .demo-inner {
-      max-width: 1100px;
+    .demo-inner-flex {
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
       flex-wrap: wrap;
-      gap: 8px;
     }
-    .demo-tag-wrap {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-    }
-    .demo-live-badge {
-      background: var(--accent-red);
-      color: #fff;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-family: var(--font-en);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
+    .demo-pill-badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      animation: pulse-badge 1.8s infinite;
+      gap: 6px;
+      background: rgba(200, 169, 126, 0.12);
+      border: 1px solid var(--border-hairline);
+      color: var(--accent-bronze-light);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.7rem;
     }
-    .demo-live-badge::before {
+    .demo-pill-badge::before {
       content: '';
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #fff;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
     }
-    @keyframes pulse-badge {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.04); }
+    .demo-notice-text {
+      color: #cbd5e1;
+      font-weight: 500;
+      font-family: var(--font-bn);
+      font-size: 0.82rem;
+      text-transform: none;
+      letter-spacing: normal;
     }
-    .demo-backlink {
+    .cwb-backlink-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid var(--accent-gold);
-      color: var(--accent-gold-light);
-      padding: 4px 12px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 0.8rem;
+      gap: 5px;
+      color: var(--accent-bronze-light);
+      border-bottom: 1px solid var(--accent-bronze-dark);
+      font-size: 0.74rem;
       font-weight: 700;
-      font-family: var(--font-en);
+      letter-spacing: 0.08em;
       transition: all 0.2s ease;
+      text-transform: uppercase;
     }
-    .demo-backlink:hover {
-      background: var(--accent-gold);
-      color: #07090e;
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
-    }
-
-    /* Urgent Notice Ribbon */
-    .urgent-ribbon {
-      background: linear-gradient(90deg, #881337 0%, #be123c 50%, #881337 100%);
+    .cwb-backlink-btn:hover {
       color: #fff;
-      text-align: center;
-      padding: 7px 12px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
+      border-color: #fff;
     }
 
-    /* Main Navigation Header */
-    header {
-      background: rgba(14, 20, 34, 0.95);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(245, 158, 11, 0.15);
-      position: sticky;
-      top: 48px;
-      z-index: 100;
-      padding: 12px 16px;
+    /* Season Notice Sub-bar */
+    .season-notice-bar {
+      background: linear-gradient(90deg, #12141c 0%, #171b26 50%, #12141c 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      text-align: center;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      color: #d1d5db;
+      font-weight: 500;
     }
-    .header-container {
-      max-width: 1100px;
+    .season-notice-bar strong {
+      color: var(--accent-bronze-light);
+    }
+
+    /* Main Editorial Header */
+    header {
+      background: rgba(11, 13, 18, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 36px;
+      z-index: 100;
+      padding: 16px 20px;
+    }
+    .header-content {
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .brand-wrap {
+    .brand-mark-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-crest {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border-hairline);
+      box-shadow: 0 0 14px var(--accent-bronze-glow);
+      object-fit: cover;
+    }
+    .brand-title-group h1 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #fff;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .brand-title-group p {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      color: var(--accent-bronze);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .header-nav-actions {
       display: flex;
       align-items: center;
       gap: 12px;
-      text-decoration: none;
     }
-    .brand-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: 2px solid var(--accent-gold);
-      box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
-      object-fit: cover;
-    }
-    .brand-text h1 {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1.2;
-    }
-    .brand-text p {
+    .atelier-status-tag {
+      display: none;
+      font-family: var(--font-sans);
       font-size: 0.72rem;
-      color: var(--text-muted);
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      font-family: var(--font-en);
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
     }
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    @media (min-width: 768px) {
+      .atelier-status-tag {
+        display: inline-block;
+      }
     }
-    .btn-header-call {
+    .btn-header-action {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      background: rgba(245, 158, 11, 0.12);
-      color: var(--accent-gold);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      text-decoration: none;
-      transition: all 0.2s ease;
-      font-family: var(--font-en);
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--border-hairline);
+      background: rgba(200, 169, 126, 0.08);
+      color: var(--accent-bronze-light);
+      transition: all 0.25s ease;
     }
-    .btn-header-call:hover {
-      background: var(--accent-gold);
-      color: #07090e;
+    .btn-header-action:hover {
+      background: var(--accent-bronze);
+      color: #07080b;
+      border-color: var(--accent-bronze);
     }
 
     /* Container */
-    .container {
-      max-width: 1100px;
+    .atelier-container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 20px;
     }
 
-    /* Hero Section */
-    .hero {
-      padding: 34px 0 20px;
+    /* ========================================================
+       EDITORIAL HERO SECTION (MAGAZINE STYLE)
+       ======================================================== */
+    .hero-editorial {
+      padding: 48px 0 32px;
       text-align: center;
       position: relative;
     }
-    .hero::before {
+    .hero-editorial::before {
       content: '';
       position: absolute;
-      top: -30px;
+      top: -40px;
       left: 50%;
       transform: translateX(-50%);
-      width: 360px;
-      height: 280px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-      filter: blur(50px);
+      width: 480px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(200, 169, 126, 0.12) 0%, transparent 70%);
+      filter: blur(60px);
       z-index: -1;
     }
-    .hero-badge {
+    .hero-edition-line {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 16px;
-      border-radius: 30px;
-      background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      color: var(--accent-gold);
-      font-size: 0.82rem;
+      gap: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
       font-weight: 700;
-      margin-bottom: 16px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
+      margin-bottom: 18px;
     }
-    .hero-title {
-      font-size: 2.1rem;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: 14px;
+    .hero-edition-line::before, .hero-edition-line::after {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--accent-bronze);
+      opacity: 0.6;
+    }
+    .hero-main-heading {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 600;
+      line-height: 1.25;
       color: #fff;
+      max-width: 900px;
+      margin: 0 auto 16px;
+      letter-spacing: 0.02em;
     }
-    .hero-title .gold {
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .hero-main-heading em {
+      font-style: italic;
+      color: var(--accent-bronze-light);
     }
-    .hero-sub {
+    .hero-sub-text {
       font-size: 1.05rem;
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: 0 auto 24px;
-      line-height: 1.65;
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+      font-weight: 400;
     }
 
-    /* Mega Offer Box */
-    .mega-offer-box {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(14, 20, 34, 0.95) 100%);
-      border: 2px solid var(--accent-gold);
-      border-radius: 18px;
-      padding: 20px 24px;
-      max-width: 580px;
-      margin: 0 auto 24px;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.6), 0 0 25px rgba(245, 158, 11, 0.2);
+    /* Bespoke Offer Statement Card */
+    .offer-monolith {
+      background: linear-gradient(180deg, #11141c 0%, #0c0e14 100%);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      padding: 24px 30px;
+      max-width: 640px;
+      margin: 0 auto 34px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.6);
       position: relative;
     }
-    .mega-badge {
+    .offer-monolith::after {
+      content: '';
       position: absolute;
-      top: -12px;
-      right: 20px;
-      background: var(--accent-red);
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 3px 12px;
+      inset: 0;
       border-radius: 12px;
-      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      pointer-events: none;
     }
-    .price-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-    .price-now {
-      font-size: 2.2rem;
+    .offer-top-kicker {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
       font-weight: 800;
-      color: var(--accent-gold);
-      font-family: var(--font-en);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
+      margin-bottom: 8px;
     }
-    .price-was {
-      font-size: 1.2rem;
-      color: #94a3b8;
+    .offer-price-ensemble {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+    .price-value-highlight {
+      font-family: var(--font-sans);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .price-original-slash {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      color: var(--text-tertiary);
       text-decoration: line-through;
-      font-family: var(--font-en);
     }
-    .save-tag {
-      background: rgba(34, 197, 94, 0.2);
-      border: 1px solid rgba(34, 197, 94, 0.4);
-      color: #4ade80;
-      font-size: 0.8rem;
+    .offer-savings-pill {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
       font-weight: 700;
       padding: 3px 10px;
       border-radius: 20px;
     }
-    .offer-items-included {
+    .offer-includes-line {
       font-size: 0.92rem;
-      color: #f1f5f9;
-      margin-top: 6px;
+      color: #d1d5db;
       font-weight: 500;
     }
 
-    /* Trust Grid */
-    .trust-grid {
+    /* Minimalist Trust Grid (Zero Emojis, Pure SVG Line Craft) */
+    .atelier-pillars {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      max-width: 700px;
-      margin: 0 auto 30px;
+      max-width: 820px;
+      margin: 0 auto 40px;
     }
     @media (min-width: 640px) {
-      .trust-grid {
+      .atelier-pillars {
         grid-template-columns: repeat(4, 1fr);
       }
     }
-    .trust-pill {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      padding: 12px 10px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #e2e8f0;
+    .pillar-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       text-align: center;
     }
-    .trust-pill .icon {
-      font-size: 1.4rem;
+    .pillar-icon-svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent-bronze);
+      fill: none;
+      stroke-width: 1.7;
+    }
+    .pillar-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #e5e7eb;
     }
 
     /* Section Headings */
-    .section-head {
+    .section-editorial-title {
       text-align: center;
-      margin: 44px 0 22px;
+      margin: 50px 0 24px;
     }
-    .section-head h2 {
-      font-size: 1.65rem;
+    .section-editorial-title .kicker {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
       font-weight: 700;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      margin-bottom: 6px;
+      display: block;
     }
-    .section-head p {
+    .section-editorial-title h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+    .section-editorial-title p {
       font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 5px;
+      color: var(--text-secondary);
+      margin-top: 6px;
     }
 
-    /* Category Filter Tabs */
-    .filter-tabs {
+    /* Filter Nav (Minimalist Tabs) */
+    .curation-filter-nav {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
+      margin-bottom: 34px;
       flex-wrap: wrap;
-      margin-bottom: 28px;
     }
-    .tab-btn {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #cbd5e1;
-      padding: 8px 18px;
-      border-radius: 22px;
-      font-size: 0.88rem;
+    .filter-tab-pill {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
-      font-family: var(--font-bn);
+      letter-spacing: 0.03em;
     }
-    .tab-btn.active, .tab-btn:hover {
-      background: var(--accent-gold);
-      color: #07090e;
-      border-color: var(--accent-gold);
-      box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
-      font-weight: 700;
+    .filter-tab-pill.active, .filter-tab-pill:hover {
+      background: rgba(200, 169, 126, 0.15);
+      border-color: var(--accent-bronze);
+      color: #fff;
     }
 
-    /* Product Grid */
-    .product-grid {
+    /* ========================================================
+       PRODUCT GRID & CARDS (BESPOKE EDITORIAL LAYOUT)
+       ======================================================== */
+    .collection-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 26px;
-      margin-bottom: 45px;
+      gap: 30px;
+      margin-bottom: 50px;
     }
     @media (min-width: 640px) {
-      .product-grid {
+      .collection-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
     @media (min-width: 1024px) {
-      .product-grid {
+      .collection-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    .product-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
+    .suit-monograph-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
     }
-    .product-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent-gold);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 25px rgba(245, 158, 11, 0.25);
+    .suit-monograph-card:hover {
+      border-color: var(--border-active);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.7), 0 0 25px var(--accent-bronze-glow);
     }
-    .card-badge {
+    .card-top-tag {
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(7, 9, 14, 0.9);
+      background: rgba(11, 13, 18, 0.88);
       backdrop-filter: blur(8px);
-      border: 1px solid var(--accent-gold);
-      color: var(--accent-gold);
-      font-size: 0.74rem;
+      border: 1px solid var(--border-hairline);
+      color: var(--accent-bronze-light);
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 20px;
+      letter-spacing: 0.1em;
+      padding: 4px 10px;
+      border-radius: 4px;
       z-index: 10;
-      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    .stock-tag {
+    .card-stock-indicator {
       position: absolute;
       top: 14px;
       right: 14px;
-      background: rgba(220, 38, 38, 0.9);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
       z-index: 10;
     }
 
-    .img-wrap {
+    .photo-viewport {
       width: 100%;
       aspect-ratio: 3/4;
-      overflow: hidden;
       position: relative;
       background: #000;
+      overflow: hidden;
       cursor: pointer;
     }
-    .img-wrap img {
+    .photo-viewport img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: block;
     }
-    .product-card:hover .img-wrap img {
+    .suit-monograph-card:hover .photo-viewport img {
       transform: scale(1.05);
     }
-    .zoom-hint {
+    .inspect-hover-btn {
       position: absolute;
       bottom: 12px;
       right: 12px;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(4px);
-      color: #fff;
-      font-size: 0.75rem;
+      background: rgba(11, 13, 18, 0.85);
+      border: 1px solid var(--border-hairline);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
       padding: 5px 10px;
-      border-radius: 6px;
+      border-radius: 4px;
       display: flex;
       align-items: center;
-      gap: 5px;
-      pointer-events: none;
+      gap: 6px;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+    .photo-viewport:hover .inspect-hover-btn {
+      opacity: 1;
+      background: #000;
     }
 
-    .card-body {
-      padding: 20px;
+    .card-details-tray {
+      padding: 22px 20px 20px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
+    .product-eng-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
       color: #fff;
-      margin-bottom: 8px;
-      line-height: 1.35;
+      line-height: 1.2;
+      margin-bottom: 2px;
+      letter-spacing: 0.02em;
     }
-    .card-details {
+    .product-bn-subtitle {
       font-size: 0.85rem;
-      color: #94a3b8;
-      margin-bottom: 12px;
-      line-height: 1.55;
+      color: var(--accent-bronze);
+      font-weight: 600;
+      margin-bottom: 10px;
     }
-    .piece-tags {
+    .product-narrative {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+    .ensemble-pieces-pills {
       display: flex;
       gap: 6px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
-    .piece-tag {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #e2e8f0;
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 6px;
+    .piece-spec-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+      font-size: 0.74rem;
+      padding: 3px 8px;
+      border-radius: 4px;
       font-weight: 500;
     }
 
-    .card-price-row {
+    .card-pricing-bar {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 14px;
-      padding-bottom: 12px;
-      border-bottom: 1px dashed rgba(255,255,255,0.12);
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .price-group {
+    .unit-pricing {
       display: flex;
       align-items: baseline;
       gap: 10px;
     }
-    .current-price {
+    .unit-price-now {
+      font-family: var(--font-sans);
       font-size: 1.55rem;
       font-weight: 800;
-      color: var(--accent-gold);
-      font-family: var(--font-en);
+      color: #fff;
     }
-    .old-price {
+    .unit-price-was {
+      font-family: var(--font-sans);
       font-size: 0.95rem;
-      color: #64748b;
+      color: var(--text-tertiary);
       text-decoration: line-through;
-      font-family: var(--font-en);
     }
 
-    /* Size Selector */
-    .size-selector-label {
-      font-size: 0.8rem;
-      color: #94a3b8;
-      margin-bottom: 8px;
+    /* Size Selector Segment */
+    .sizing-header {
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
       display: flex;
       justify-content: space-between;
+      margin-bottom: 8px;
     }
-    .size-btn-group {
+    .active-size-readout {
+      color: var(--accent-bronze-light);
+      font-weight: 700;
+    }
+    .sizing-matrix {
       display: flex;
       gap: 6px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
     }
-    .size-chip {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #cbd5e1;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.85rem;
+    .size-option-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 6px 13px;
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
-      font-family: var(--font-en);
     }
-    .size-chip:hover {
-      border-color: var(--accent-gold);
+    .size-option-pill:hover {
+      border-color: var(--accent-bronze);
       color: #fff;
     }
-    .size-chip.selected {
-      background: var(--accent-gold);
-      color: #07090e;
-      border-color: var(--accent-gold);
-      box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+    .size-option-pill.active {
+      background: var(--accent-bronze);
+      color: #07080b;
+      border-color: var(--accent-bronze);
+      box-shadow: 0 0 10px var(--accent-bronze-glow);
     }
 
-    /* WhatsApp Order Button */
-    .btn-wa-order {
-      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    /* WhatsApp Order Action Button */
+    .btn-atelier-order {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
       color: #fff;
       border: none;
-      border-radius: 12px;
+      border-radius: 6px;
       padding: 13px 18px;
-      font-size: 0.98rem;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
       font-weight: 700;
+      letter-spacing: 0.03em;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      text-decoration: none;
+      gap: 9px;
       cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: var(--font-bn);
+      transition: all 0.25s ease;
       margin-top: auto;
-      box-shadow: 0 4px 18px rgba(22, 163, 74, 0.35);
+      box-shadow: 0 4px 18px rgba(16, 185, 129, 0.3);
     }
-    .btn-wa-order:hover {
+    .btn-atelier-order:hover {
+      background: #059669;
       transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(22, 163, 74, 0.5);
+      box-shadow: 0 6px 24px rgba(16, 185, 129, 0.45);
+    }
+    .btn-atelier-order svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
 
-    /* Why Choose Section */
-    .features-section {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 22px;
-      padding: 32px 22px;
-      margin: 45px auto;
-      max-width: 950px;
+    /* ========================================================
+       CRAFTSMANSHIP ATELIER BREAKDOWN (PINTEREST / EDITORIAL)
+       ======================================================== */
+    .atelier-craft-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 14px;
+      padding: 40px 30px;
+      margin: 55px auto;
+      max-width: 1050px;
     }
-    .features-grid {
+    .craft-quad-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 18px;
-      margin-top: 22px;
+      gap: 24px;
+      margin-top: 30px;
     }
     @media (min-width: 640px) {
-      .features-grid {
+      .craft-quad-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    .feature-card {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 18px;
+    @media (min-width: 1024px) {
+      .craft-quad-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .craft-tile {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 22px 18px;
+      transition: border-color 0.25s;
+    }
+    .craft-tile:hover {
+      border-color: var(--border-active);
+    }
+    .craft-tile-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      background: rgba(200, 169, 126, 0.1);
+      border: 1px solid var(--border-hairline);
       display: flex;
-      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
     }
-    .feature-icon {
-      font-size: 1.8rem;
-      flex-shrink: 0;
-      line-height: 1;
+    .craft-tile-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent-bronze-light);
+      fill: none;
+      stroke-width: 1.8;
     }
-    .feature-content h4 {
-      font-size: 1.05rem;
+    .craft-tile h4 {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
-    .feature-content p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+    .craft-tile p {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
     }
 
-    /* Video Section */
-    .video-section {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 22px;
-      padding: 26px 20px;
-      margin: 45px auto;
+    /* Video Embed Box */
+    .showroom-film-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 14px;
+      padding: 30px 24px;
+      margin: 55px auto;
       max-width: 950px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
     }
-    .video-wrapper {
+    .film-aspect-container {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.1);
-      margin-top: 18px;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      margin-top: 20px;
     }
-    .video-wrapper iframe {
+    .film-aspect-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -688,382 +803,260 @@
       border: 0;
     }
 
-    /* Reviews / Testimonials Section */
-    .reviews-section {
-      margin: 45px auto;
-      max-width: 950px;
+    /* Size Chart */
+    .tailor-measurement-vault {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 32px 24px;
+      margin: 55px auto;
+      max-width: 900px;
     }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      margin-top: 22px;
-    }
-    @media (min-width: 640px) {
-      .reviews-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    .review-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .review-stars {
-      color: #f59e0b;
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-    .review-text {
-      font-size: 0.88rem;
-      color: #e2e8f0;
-      line-height: 1.55;
-      margin-bottom: 14px;
-      font-style: italic;
-    }
-    .reviewer-meta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 10px;
-    }
-    .reviewer-avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: var(--accent-gold);
-      color: #07090e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-family: var(--font-en);
-      font-size: 0.95rem;
-    }
-    .reviewer-info h5 {
-      font-size: 0.9rem;
-      color: #fff;
-    }
-    .reviewer-info p {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    /* Size Chart Table */
-    .size-chart-box {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 26px 18px;
-      margin: 45px auto;
-      max-width: 850px;
-    }
-    .size-table {
+    .measurement-data-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 16px;
-      font-size: 0.88rem;
+      margin-top: 20px;
+      font-size: 0.86rem;
     }
-    .size-table th, .size-table td {
+    .measurement-data-table th, .measurement-data-table td {
       padding: 12px 14px;
       text-align: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .size-table th {
-      background: rgba(245, 158, 11, 0.12);
-      color: var(--accent-gold);
+    .measurement-data-table th {
+      background: rgba(200, 169, 126, 0.08);
+      color: var(--accent-bronze-light);
+      font-family: var(--font-sans);
       font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
     }
-    .size-table tr:hover td {
+    .measurement-data-table tr:hover td {
       background: rgba(255, 255, 255, 0.02);
     }
 
-    /* FAQ Section */
-    .faq-section {
-      max-width: 850px;
-      margin: 45px auto;
-    }
-    .faq-item {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Showroom Atelier Address Card */
+    .atelier-destination-card {
+      background: linear-gradient(180deg, #12151e 0%, #0a0b10 100%);
+      border: 1px solid var(--border-hairline);
       border-radius: 14px;
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
-    .faq-question {
-      padding: 16px 20px;
-      font-weight: 700;
-      font-size: 0.96rem;
-      color: #fff;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq-answer {
-      padding: 0 20px 16px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* Showroom & Location */
-    .showroom-box {
-      background: linear-gradient(145deg, #101726, #090d15);
-      border: 2px solid var(--border-color);
-      border-radius: 22px;
-      padding: 32px 24px;
-      margin: 45px auto;
-      max-width: 850px;
+      padding: 36px 24px;
+      margin: 55px auto;
+      max-width: 900px;
       text-align: center;
     }
-    .showroom-box h3 {
-      font-size: 1.5rem;
+    .atelier-destination-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
       color: #fff;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
     }
-    .showroom-address {
-      font-size: 1.05rem;
-      color: #e2e8f0;
-      margin-bottom: 20px;
+    .destination-address-line {
+      font-size: 1rem;
+      color: #d1d5db;
+      margin-bottom: 22px;
       line-height: 1.6;
     }
-    .showroom-contacts {
+    .destination-action-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-bottom: 20px;
     }
-    .contact-badge {
+    .destination-link-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 11px 20px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
+      gap: 8px;
+      padding: 11px 22px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
       color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.92rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
       transition: all 0.2s ease;
     }
-    .contact-badge:hover {
-      border-color: var(--accent-gold);
-      background: rgba(245, 158, 11, 0.12);
-      color: var(--accent-gold);
+    .destination-link-btn:hover {
+      border-color: var(--accent-bronze);
+      background: rgba(200, 169, 126, 0.1);
+      color: var(--accent-bronze-light);
     }
 
     /* ========================================================
-       PROMINENT CRYPTOWEBBUILD BACKLINK BANNER
+       CRYPTOWEBBUILD BESPOKE SIGNATURE & BACKLINK CARD
        ======================================================== */
-    .cryptowebbuild-hero-card {
-      background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(15, 23, 42, 0.9) 100%);
-      border: 2px dashed rgba(59, 130, 246, 0.5);
-      border-radius: 20px;
-      padding: 26px 20px;
-      max-width: 850px;
-      margin: 45px auto;
+    .cwb-signature-monument {
+      background: linear-gradient(135deg, rgba(16, 24, 40, 0.7) 0%, rgba(8, 10, 15, 0.95) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 14px;
+      padding: 30px 24px;
+      max-width: 900px;
+      margin: 55px auto 40px;
       text-align: center;
+      position: relative;
     }
-    .cryptowebbuild-hero-card h4 {
-      font-family: var(--font-en);
-      font-size: 1.3rem;
+    .cwb-tagline-kicker {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #60a5fa;
       font-weight: 800;
-      color: #93c5fd;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
-    .cryptowebbuild-hero-card p {
+    .cwb-signature-monument h4 {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 10px;
+    }
+    .cwb-signature-monument p {
       font-size: 0.92rem;
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto 18px;
+      color: var(--text-secondary);
+      max-width: 660px;
+      margin: 0 auto 20px;
       line-height: 1.6;
     }
-    .cwb-action-wrap {
+    .cwb-portal-actions {
       display: flex;
       justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
     }
-    .btn-cwb-main {
+    .cwb-official-portal-btn {
       background: #2563eb;
       color: #fff;
       padding: 10px 22px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-family: var(--font-en);
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
       font-weight: 700;
-      font-size: 0.9rem;
+      letter-spacing: 0.04em;
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
     }
-    .btn-cwb-main:hover {
+    .cwb-official-portal-btn:hover {
       background: #1d4ed8;
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.45);
     }
-    .btn-cwb-wa {
-      background: rgba(34, 197, 94, 0.15);
-      border: 1px solid rgba(34, 197, 94, 0.4);
-      color: #4ade80;
+    .cwb-sagor-wa-btn {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
       padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
       font-weight: 700;
-      font-size: 0.9rem;
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
     }
-    .btn-cwb-wa:hover {
-      background: #16a34a;
+    .cwb-sagor-wa-btn:hover {
+      background: #10b981;
       color: #fff;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 35px 16px;
-      color: #64748b;
-      font-size: 0.85rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 35px 20px;
+      color: var(--text-tertiary);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      border-top: 1px solid var(--border-subtle);
     }
     footer a {
-      color: var(--accent-gold);
-      text-decoration: none;
-      font-weight: 600;
+      color: var(--accent-bronze-light);
+      text-decoration: underline;
     }
 
-    /* Sticky Bottom Bar */
-    .sticky-bar {
+    /* Sticky Mobile Action Bar */
+    .tactile-bottom-bar {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(14, 20, 34, 0.98);
-      backdrop-filter: blur(14px);
-      border-top: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 11px 16px;
+      background: rgba(11, 13, 18, 0.96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border-hairline);
+      padding: 12px 18px;
       display: flex;
-      gap: 10px;
+      gap: 12px;
       z-index: 1000;
-      box-shadow: 0 -4px 25px rgba(0,0,0,0.7);
+      box-shadow: 0 -8px 25px rgba(0,0,0,0.7);
     }
-    .sticky-bar a {
+    .tactile-bottom-bar a {
       flex: 1;
-      padding: 13px;
-      border-radius: 12px;
+      padding: 12px;
+      border-radius: 6px;
       text-align: center;
-      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
       font-weight: 700;
-      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      font-family: var(--font-bn);
+      letter-spacing: 0.02em;
     }
-    .btn-sticky-call {
-      background: rgba(255, 255, 255, 0.08);
+    .btn-tactile-dial {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
       color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
     }
-    .btn-sticky-wa {
-      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    .btn-tactile-order {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
       color: #fff;
-      box-shadow: 0 0 20px rgba(22, 163, 74, 0.45);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
     }
 
-    /* Social Proof Live Order Toast */
-    .toast-live-order {
-      position: fixed;
-      bottom: 85px;
-      left: 16px;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--accent-gold);
-      border-radius: 14px;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      z-index: 900;
-      max-width: 320px;
-      animation: slide-toast 0.4s ease;
-      transition: opacity 0.4s ease;
-    }
-    .toast-img {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      object-fit: cover;
-      flex-shrink: 0;
-      border: 1px solid rgba(245, 158, 11, 0.4);
-    }
-    .toast-text {
-      font-size: 0.78rem;
-      color: #f1f5f9;
-      line-height: 1.35;
-    }
-    .toast-time {
-      font-size: 0.7rem;
-      color: var(--accent-gold);
-      font-weight: 600;
-    }
-    @keyframes slide-toast {
-      from { transform: translateX(-100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    /* Fullscreen Lightbox */
-    .lightbox-modal {
+    /* Lightbox Modal */
+    .fabric-lightbox-modal {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.96);
-      z-index: 2000;
+      background: rgba(4, 5, 8, 0.96);
+      z-index: 3000;
       align-items: center;
       justify-content: center;
-      padding: 16px;
+      padding: 20px;
     }
-    .lightbox-modal.active {
+    .fabric-lightbox-modal.active {
       display: flex;
     }
-    .lightbox-content {
+    .lightbox-canvas-frame {
       max-width: 90%;
-      max-height: 85vh;
-      border-radius: 14px;
+      max-height: 88vh;
+      border-radius: 8px;
       overflow: hidden;
-      border: 1px solid rgba(245, 158, 11, 0.35);
+      border: 1px solid var(--border-hairline);
       position: relative;
     }
-    .lightbox-content img {
+    .lightbox-canvas-frame img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       display: block;
     }
-    .lightbox-close {
+    .lightbox-dismiss {
       position: absolute;
       top: 16px;
       right: 16px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
       color: #fff;
       border: 1px solid rgba(255,255,255,0.3);
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -1073,451 +1066,436 @@
 </head>
 <body>
 
-  <!-- ==========================================
-       PROMINENT TOP LIVE DEMO BANNER WITH BACKLINK
-       ========================================== -->
-  <aside class="demo-top-header">
-    <div class="demo-inner">
-      <div class="demo-tag-wrap">
-        <span class="demo-live-badge">DEMO VERSION</span>
-        <span>⚡ <strong>Suit Gallery Clothing House</strong>-এর লাইভ ৩-দিনের ফ্রি টেস্ট ডেমো ওয়েবসাইট</span>
+  <!-- ========================================================
+       TOP DEMO ANNOUNCEMENT BAR (EDITORIAL MINIMALIST)
+       ======================================================== -->
+  <aside class="top-demo-ribbon">
+    <div class="demo-inner-flex">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="demo-pill-badge">DEMO PREVIEW</span>
+        <span class="demo-notice-text">Suit Gallery Clothing House — লাইভ ৩-দিনের ফ্রি টেস্ট ডেমো ওয়েবসাইট</span>
       </div>
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <span style="font-size: 0.78rem; color: #cbd5e1;">Website Developed By:</span>
-        <a href="https://cryptowebbuild.com" target="_blank" rel="noopener noreferrer" class="demo-backlink" title="Visit CryptoWebBuild Official Website">
-          🌐 CryptoWebBuild.com ↗
+      <div>
+        <a href="https://cryptowebbuild.com" target="_blank" rel="noopener noreferrer" class="cwb-backlink-btn" title="Engineered by CryptoWebBuild">
+          Engineered by CryptoWebBuild.com ↗
         </a>
       </div>
     </div>
   </aside>
 
-  <!-- Urgent Delivery / Stock Ribbon -->
-  <div class="urgent-ribbon">
-    <span>🔥 ওয়েডিং ও উইন্টার সিজন ধামাকা অফার — কমপ্লিট ৩-পিস স্যুট মাত্র ৩,৫০০ টাকা! | সারা দেশে ক্যাশ অন ডেলিভারি 🚚</span>
+  <!-- Season Sub-bar -->
+  <div class="season-notice-bar">
+    <span>ওয়েডিং ও উইন্টার সিজন স্পেশাল: কমপ্লিট ৩-পিস স্যুট মাত্র <strong>৩,৫০০ টাকা</strong> | শোরুম ট্রায়াল ও সারা দেশে ক্যাশ অন ডেলিভারি</span>
   </div>
 
   <!-- Header -->
   <header>
-    <div class="header-container">
-      <a href="#" class="brand-wrap">
-        <img src="images/logo_badge.webp" alt="Suit Gallery Badge" class="brand-logo" onerror="this.style.display='none'">
-        <div class="brand-text">
+    <div class="header-content">
+      <a href="#" class="brand-mark-wrap">
+        <img src="images/logo_badge.webp" alt="Suit Gallery Atelier Emblem" class="brand-crest" onerror="this.style.display='none'">
+        <div class="brand-title-group">
           <h1>SUIT GALLERY</h1>
           <p>CLOTHING HOUSE • NEW ELEPHANT ROAD</p>
         </div>
       </a>
-      <div class="header-actions">
-        <a href="tel:01778855772" class="btn-header-call">
-          📞 01778-855772
+      <div class="header-nav-actions">
+        <span class="atelier-status-tag">HAJI ZAINAL BHABAN (10 AM — 9 PM)</span>
+        <a href="tel:01778855772" class="btn-header-action">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          01778-855772
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="container">
+  <!-- Main Body -->
+  <main class="atelier-container">
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-badge">✨ ELEPHANT ROAD'S PREMIER 3-PIECE SUIT HUB</div>
-      <h2 class="hero-title">
-        রাজকীয় আভিজাত্য ও পারফেক্ট ফিটিংয়ে<br>
-        <span class="gold">প্রিমিয়াম ৩-পিস স্যুট কালেকশন</span>
+    <section class="hero-editorial">
+      <div class="hero-edition-line">AUTUMN / WINTER 2026 BESPOKE EDIT</div>
+      <h2 class="hero-main-heading">
+        আধুনিক আভিজাত্যের নিখুঁত প্রকাশ<br>
+        <em>The 3-Piece Bespoke Suite</em>
       </h2>
-      <p class="hero-sub">
-        কর্পোরেট মিটিং, প্রেজেন্টেশন কিংবা বিয়ের জমকালো আয়োজন—প্রতিটি অনুষ্ঠানে আপনার রুচি ও ব্যক্তিত্ব ফুটিয়ে তুলুন নিখুঁত ফিনিশিং ও আধুনিক কাটের ৩-পিস স্যুটে।
+      <p class="hero-sub-text">
+        কর্পোরেট সম্মেলন থেকে শুরু করে বিয়ের রাজকীয় উৎসব—প্রতিটি মুহূর্তকে স্মরণীয় করে তুলতে সুনির্দিষ্ট কাট ও প্রিমিয়াম ইতালিয়ান উল-ব্লেন্ড কাপড়ে তৈরি এক্সক্লুসিভ ৩-পিস স্যুট কালেকশন।
       </p>
 
-      <!-- Mega Offer Box -->
-      <div class="mega-offer-box">
-        <span class="mega-badge">LIMITED TIME OFFER</span>
-        <div class="price-row">
-          <span class="price-now">৳৩,৫০০</span>
-          <span class="price-was">৳৪,৫০০</span>
-          <span class="save-tag">৳১,০০০ সাশ্রয়!</span>
+      <!-- Offer Monolith -->
+      <div class="offer-monolith">
+        <div class="offer-top-kicker">CURATED BESPOKE ENSEMBLE</div>
+        <div class="offer-price-ensemble">
+          <span class="price-value-highlight">৳৩,৫০০</span>
+          <span class="price-original-slash">৳৪,৫০০</span>
+          <span class="offer-savings-pill">৳১,০০০ সাশ্রয়</span>
         </div>
-        <p class="offer-items-included">
-          🎯 <strong>কমপ্লিট সেট ইনক্লুডেড:</strong> ব্লেজার কোট + ম্যাচিং ওয়েস্টকোট (ভেস্ট) + ফর্মাল ট্রাউজার
+        <p class="offer-includes-line">
+          কমপ্লিট সেট: স্ট্রাকচার্ড ব্লেজার কোট + ম্যাচিং ডিজাইনার ভেস্ট + ট্রাউজার
         </p>
       </div>
 
-      <!-- Trust Grid -->
-      <div class="trust-grid">
-        <div class="trust-pill">
-          <span class="icon">💎</span>
-          <span>ইতালিয়ান ব্লেন্ডেড ফেব্রিক</span>
+      <!-- Atelier Pillar Badges (Zero Emojis - Pure Clean SVG Line Craft) -->
+      <div class="atelier-pillars">
+        <div class="pillar-item">
+          <svg class="pillar-icon-svg" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          <span class="pillar-text">ইতালিয়ান ব্লেন্ডেড ফেব্রিক</span>
         </div>
-        <div class="trust-pill">
-          <span class="icon">✂️</span>
-          <span>রেডিমেড ও কাস্টম ফিট</span>
+        <div class="pillar-item">
+          <svg class="pillar-icon-svg" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+          <span class="pillar-text">ক্যানভাস শোল্ডার স্ট্রাকচার</span>
         </div>
-        <div class="trust-pill">
-          <span class="icon">📏</span>
-          <span>৩৬ থেকে ৪৬ সব সাইজ</span>
+        <div class="pillar-item">
+          <svg class="pillar-icon-svg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="7" y2="10"></line><line x1="11" y1="8" x2="11" y2="12"></line><line x1="15" y1="8" x2="15" y2="10"></line></svg>
+          <span class="pillar-text">৩৬ থেকে ৪৬ সব সাইজ রেডি</span>
         </div>
-        <div class="trust-pill">
-          <span class="icon">🏬</span>
-          <span>শোরুমে ট্রায়াল সুবিধা</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hot Selling Showcase Section -->
-    <div class="section-head" id="collection">
-      <h2>👔 হট সেলিং ৩-পিস স্যুট কালেকশন</h2>
-      <p>পছন্দের স্যুট ও সাইজ নির্বাচন করে সরাসরি ১-ক্লিকে হোয়াটসঅ্যাপে মেমো পাঠান</p>
-    </div>
-
-    <!-- Filter Tabs -->
-    <div class="filter-tabs">
-      <button class="tab-btn active" onclick="filterSuits('all', event)">সকল কালেকশন (৫)</button>
-      <button class="tab-btn" onclick="filterSuits('wedding', event)">ওয়েডিং ও পার্টি</button>
-      <button class="tab-btn" onclick="filterSuits('corporate', event)">অফিস ও কর্পোরেট</button>
-    </div>
-
-    <!-- Product Grid -->
-    <div class="product-grid">
-
-      <!-- Product 1: Executive Grey -->
-      <article class="product-card" data-category="corporate all">
-        <div class="card-badge">👑 TOP BESTSELLER</div>
-        <div class="stock-tag">স্টক: ৪টি বাকি</div>
-        <div class="img-wrap" onclick="openLightbox('images/suit_grey.webp')">
-          <img src="images/suit_grey.webp" alt="Executive Grey 3-Piece Suit" loading="lazy">
-          <div class="zoom-hint">🔍 জুম করে দেখুন</div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Executive Grey 3-Piece Suit</h3>
-          <p class="card-details">
-            প্রিমিয়াম অ্যাশ/গ্রে ট্রিপল পিস সেট। কর্পোরেট এক্সিকিউটিভ, অফিশিয়াল মিটিং ও যেকোনো পার্টিতে সবচেয়ে ডিসেন্ট ও পাওয়ারফুল লুক।
-          </p>
-          <div class="piece-tags">
-            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
-            <span class="piece-tag">✓ ১x ম্যাচিং ভেস্ট</span>
-            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
-          </div>
-
-          <div class="card-price-row">
-            <div class="price-group">
-              <span class="current-price">৳৩,৫০০</span>
-              <span class="old-price">৳৪,৫০০</span>
-            </div>
-            <span class="save-tag">সেভ ৳১,০০০</span>
-          </div>
-
-          <div class="size-selector-label">
-            <span>আপনার সাইজ নির্বাচন করুন:</span>
-            <span id="selected-size-1" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
-          </div>
-          <div class="size-btn-group" data-display="selected-size-1">
-            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
-            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
-            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
-            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
-            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
-            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
-          </div>
-
-          <button class="btn-wa-order" onclick="orderOnWhatsApp('Executive Grey 3-Piece Suit', 'selected-size-1')">
-            💬 হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
-          </button>
-        </div>
-      </article>
-
-      <!-- Product 2: Deep Maroon Wedding Special -->
-      <article class="product-card" data-category="wedding all">
-        <div class="card-badge">✨ WEDDING SPECIAL</div>
-        <div class="stock-tag">স্টক: ৩টি বাকি</div>
-        <div class="img-wrap" onclick="openLightbox('images/suit_maroon.webp')">
-          <img src="images/suit_maroon.webp" alt="Deep Maroon Wedding 3-Piece Suit" loading="lazy">
-          <div class="zoom-hint">🔍 জুম করে দেখুন</div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Deep Maroon / Wine 3-Piece Suit</h3>
-          <p class="card-details">
-            জমকালো ডিপ ওয়াইন ট্রিপল পিস সেট। বিয়ের রিসেপশন, হলুদের জমকালো রাত কিংবা গালা ডিনারে দৃষ্টি কাড়ার সেরা চয়েস।
-          </p>
-          <div class="piece-tags">
-            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
-            <span class="piece-tag">✓ ১x ম্যাচিং ভেস্ট</span>
-            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
-          </div>
-
-          <div class="card-price-row">
-            <div class="price-group">
-              <span class="current-price">৳৩,৫০০</span>
-              <span class="old-price">৳৪,৫০০</span>
-            </div>
-            <span class="save-tag">সেভ ৳১,০০০</span>
-          </div>
-
-          <div class="size-selector-label">
-            <span>আপনার সাইজ নির্বাচন করুন:</span>
-            <span id="selected-size-2" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
-          </div>
-          <div class="size-btn-group" data-display="selected-size-2">
-            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
-            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
-            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
-            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
-            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
-            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
-          </div>
-
-          <button class="btn-wa-order" onclick="orderOnWhatsApp('Deep Maroon / Wine Wedding 3-Piece Suit', 'selected-size-2')">
-            💬 হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
-          </button>
-        </div>
-      </article>
-
-      <!-- Product 3: Classic Jet Black -->
-      <article class="product-card" data-category="corporate wedding all">
-        <div class="card-badge">⭐ FORMAL ICON</div>
-        <div class="stock-tag">স্টক: ৫টি বাকি</div>
-        <div class="img-wrap" onclick="openLightbox('images/suit_black.webp')">
-          <img src="images/suit_black.webp" alt="Classic Jet Black 3-Piece Suit" loading="lazy">
-          <div class="zoom-hint">🔍 জুম করে দেখুন</div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Classic Jet Black 3-Piece Suit</h3>
-          <p class="card-details">
-            রাজকীয় ডিপ ব্ল্যাক ট্রিপল পিস সেট। টাইমলেস ব্ল্যাক ফর্মাল লুক যা প্রতিটি পুরুষের আলমারির এক নম্বর রত্ন।
-          </p>
-          <div class="piece-tags">
-            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
-            <span class="piece-tag">✓ ১x ম্যাচিং ভেস্ট</span>
-            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
-          </div>
-
-          <div class="card-price-row">
-            <div class="price-group">
-              <span class="current-price">৳৩,৫০০</span>
-              <span class="old-price">৳৪,৫০০</span>
-            </div>
-            <span class="save-tag">সেভ ৳১,০০০</span>
-          </div>
-
-          <div class="size-selector-label">
-            <span>আপনার সাইজ নির্বাচন করুন:</span>
-            <span id="selected-size-3" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
-          </div>
-          <div class="size-btn-group" data-display="selected-size-3">
-            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
-            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
-            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
-            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
-            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
-            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
-          </div>
-
-          <button class="btn-wa-order" onclick="orderOnWhatsApp('Classic Jet Black 3-Piece Suit', 'selected-size-3')">
-            💬 হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
-          </button>
-        </div>
-      </article>
-
-      <!-- Product 4: Midnight Navy -->
-      <article class="product-card" data-category="corporate all">
-        <div class="card-badge">💼 EXECUTIVE CHOICE</div>
-        <div class="stock-tag">স্টক: ৪টি বাকি</div>
-        <div class="img-wrap" onclick="openLightbox('images/suit_navy.webp')">
-          <img src="images/suit_navy.webp" alt="Midnight Navy 3-Piece Suit" loading="lazy">
-          <div class="zoom-hint">🔍 জুম করে দেখুন</div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Midnight Navy 3-Piece Suit</h3>
-          <p class="card-details">
-            প্রিমিয়াম মিডনাইট নেভি ব্লু ট্রিপল পিস সেট। স্মার্ট বিজনেস ইন্টারভিউ ও সোশ্যাল যেকোনো অনুষ্ঠানে দেয় চরম মার্জিত লুক।
-          </p>
-          <div class="piece-tags">
-            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
-            <span class="piece-tag">✓ ১x ম্যাচিং ভেস্ট</span>
-            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
-          </div>
-
-          <div class="card-price-row">
-            <div class="price-group">
-              <span class="current-price">৳৩,৫০০</span>
-              <span class="old-price">৳৪,৫০০</span>
-            </div>
-            <span class="save-tag">সেভ ৳১,০০০</span>
-          </div>
-
-          <div class="size-selector-label">
-            <span>আপনার সাইজ নির্বাচন করুন:</span>
-            <span id="selected-size-4" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
-          </div>
-          <div class="size-btn-group" data-display="selected-size-4">
-            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
-            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
-            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
-            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
-            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
-            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
-          </div>
-
-          <button class="btn-wa-order" onclick="orderOnWhatsApp('Midnight Navy 3-Piece Suit', 'selected-size-4')">
-            💬 হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
-          </button>
-        </div>
-      </article>
-
-      <!-- Product 5: Royal Sapphire Blue -->
-      <article class="product-card" data-category="wedding all">
-        <div class="card-badge">💎 ROYAL EDITION</div>
-        <div class="stock-tag">স্টক: ২টি বাকি</div>
-        <div class="img-wrap" onclick="openLightbox('images/suit_royalblue.webp')">
-          <img src="images/suit_royalblue.webp" alt="Royal Sapphire Blue 3-Piece Suit" loading="lazy">
-          <div class="zoom-hint">🔍 জুম করে দেখুন</div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Royal Sapphire Blue 3-Piece Suit</h3>
-          <p class="card-details">
-            আই-ক্যাচিং ভাইব্রেন্ট রয়্যাল ব্লু ট্রিপল পিস সেট। ডেলাইট ইভেন্ট, ফটোশুট ও পার্টিতে সবার নজর কাড়ার অনবদ্য পোশাক।
-          </p>
-          <div class="piece-tags">
-            <span class="piece-tag">✓ ১x ব্লেজার কোট</span>
-            <span class="piece-tag">✓ ১x ম্যাচিং ভেস্ট</span>
-            <span class="piece-tag">✓ ১x ফর্মাল ট্রাউজার</span>
-          </div>
-
-          <div class="card-price-row">
-            <div class="price-group">
-              <span class="current-price">৳৩,৫০০</span>
-              <span class="old-price">৳৪,৫০০</span>
-            </div>
-            <span class="save-tag">সেভ ৳১,০০০</span>
-          </div>
-
-          <div class="size-selector-label">
-            <span>আপনার সাইজ নির্বাচন করুন:</span>
-            <span id="selected-size-5" style="color: var(--accent-gold); font-weight: 700;">Size: 38</span>
-          </div>
-          <div class="size-btn-group" data-display="selected-size-5">
-            <span class="size-chip" onclick="selectSize(this, 36)">36</span>
-            <span class="size-chip selected" onclick="selectSize(this, 38)">38</span>
-            <span class="size-chip" onclick="selectSize(this, 40)">40</span>
-            <span class="size-chip" onclick="selectSize(this, 42)">42</span>
-            <span class="size-chip" onclick="selectSize(this, 44)">44</span>
-            <span class="size-chip" onclick="selectSize(this, 46)">46</span>
-          </div>
-
-          <button class="btn-wa-order" onclick="orderOnWhatsApp('Royal Sapphire Blue 3-Piece Suit', 'selected-size-5')">
-            💬 হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
-          </button>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- Why Choose Suit Gallery Section -->
-    <section class="features-section">
-      <div class="section-head" style="margin: 0 0 10px;">
-        <h2>🌟 কেন Suit Gallery-র ৩-পিস স্যুট সেরা?</h2>
-        <p>বাজেট প্রাইসে প্রিমিয়াম ফেব্রিক ও এক্সক্লুসিভ টেইলারিংয়ের নিখুঁত সমন্বয়</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">💎</div>
-          <div class="feature-content">
-            <h4>ইতালিয়ান ব্লেন্ডেড ফেব্রিক</h4>
-            <p>উচ্চমানের রিঙ্কেল-ফ্রি সুটিং কাপড় যা দীর্ঘ সময় পরলেও কুঁচকে যায় না এবং শরীরে অসাধারণ কমফোর্ট দেয়।</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">✂️</div>
-          <div class="feature-content">
-            <h4>স্ট্রাকচার্ড ক্যানভাস শোল্ডার</h4>
-            <p>আধুনিক ড্রপ-৬ স্লিম ফিটিং ও পারফেক্ট শোল্ডার প্যাডিং যা আপনার বডি শেপকে আরও স্মার্ট ও পুরুষোচিত করে তোলে।</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔄</div>
-          <div class="feature-content">
-            <h4>১০০% সাইজ এক্সচেঞ্জ নিশ্চয়তা</h4>
-            <p>সাইজ নিয়ে কোনো দ্বিধা নেই! বাসায় ট্রায়াল দিয়ে সাইজে সমস্যা হলে সম্পূর্ণ ফ্রিতে সাইজ পরিবর্তন করে দেওয়া হয়।</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏬</div>
-          <div class="feature-content">
-            <h4>শোরুমে ট্রায়াল ও ফ্রি অল্টারেশন</h4>
-            <p>এলিফ্যান্ট রোডের হাজী জয়নাল ভবনে এসে সরাসরি ট্রায়াল দিতে পারেন অথবা নিজস্ব মাপে অল্টারেশন করাতে পারেন।</p>
-          </div>
+        <div class="pillar-item">
+          <svg class="pillar-icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span class="pillar-text">শোরুমে ট্রায়াল ও অল্টারেশন</span>
         </div>
       </div>
     </section>
 
-    <!-- YouTube Showroom Video Review -->
-    <section class="video-section">
-      <div class="section-head" style="margin-top: 0;">
-        <h2>🎥 শোরুম ভিজিট ও ফেব্রিক রিভিউ</h2>
-        <p>Shopnil Vlogs-এর অফিসিয়াল শোরুম রিভিউ ও স্যুট কালেকশন ভিডিও দেখে নিন</p>
+    <!-- Curated Collection Grid -->
+    <section id="collection">
+      <div class="section-editorial-title">
+        <span class="kicker">THE CURATED COLLECTION</span>
+        <h2>সিলেক্টেড ৩-পিস স্যুট মাস্টারপিস</h2>
+        <p>পছন্দের পোশাক ও সাইজ নির্বাচন করে সরাসরি ১-ক্লিকে হোয়াটসঅ্যাপে অর্ডার মেমো পাঠান</p>
       </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/-Q5veJiLvPw?rel=0" title="Suit Gallery Clothing House Showroom Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <!-- Filter Tabs -->
+      <div class="curation-filter-nav">
+        <button class="filter-tab-pill active" onclick="applyCollectionFilter('all', event)">ALL EDITIONS (৫)</button>
+        <button class="filter-tab-pill" onclick="applyCollectionFilter('wedding', event)">WEDDING & GALA</button>
+        <button class="filter-tab-pill" onclick="applyCollectionFilter('corporate', event)">EXECUTIVE & FORMAL</button>
+      </div>
+
+      <!-- The Product Monograph Cards -->
+      <div class="collection-grid">
+
+        <!-- Card 1: The Mayfair Charcoal Grey -->
+        <article class="suit-monograph-card" data-curation="corporate all">
+          <div class="card-top-tag">EDITION 01 • BESTSELLER</div>
+          <div class="card-stock-indicator">স্টক: ৪টি বাকি</div>
+          <div class="photo-viewport" onclick="triggerFabricInspection('images/suit_grey.webp')">
+            <img src="images/suit_grey.webp" alt="The Mayfair Charcoal Grey 3-Piece Suit" loading="lazy">
+            <div class="inspect-hover-btn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              INSPECT FABRIC
+            </div>
+          </div>
+          <div class="card-details-tray">
+            <h3 class="product-eng-title">The Mayfair Charcoal</h3>
+            <div class="product-bn-subtitle">৩-পিস এক্সিকিউটিভ অ্যাশ/গ্রে স্যুট</div>
+            <p class="product-narrative">
+              কর্পোরেট সামিট, বোর্ডরুম প্রেজেন্টেশন ও সোশ্যাল পার্টির জন্য সবচেয়ে অভিজাত ও আধুনিক কাট। রিঙ্কেল-ফ্রি প্রিমিয়াম সুটিং উলে তৈরি।
+            </p>
+            <div class="ensemble-pieces-pills">
+              <span class="piece-spec-pill">১x স্ট্রাকচার্ড ব্লেজার</span>
+              <span class="piece-spec-pill">১x ম্যাচিং ভেস্ট</span>
+              <span class="piece-spec-pill">১x স্লিম ট্রাউজার</span>
+            </div>
+
+            <div class="card-pricing-bar">
+              <div class="unit-pricing">
+                <span class="unit-price-now">৳৩,৫০০</span>
+                <span class="unit-price-was">৳৪,৫০০</span>
+              </div>
+              <span class="offer-savings-pill">সেভ ৳১,০০০</span>
+            </div>
+
+            <div class="sizing-header">
+              <span>SELECT SIZE:</span>
+              <span id="label-size-1" class="active-size-readout">Size: 38</span>
+            </div>
+            <div class="sizing-matrix" data-display-target="label-size-1">
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 36)">36</button>
+              <button type="button" class="size-option-pill active" onclick="pickAtelierSize(this, 38)">38</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 40)">40</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 42)">42</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 44)">44</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 46)">46</button>
+            </div>
+
+            <button class="btn-atelier-order" onclick="dispatchWhatsAppMemo('The Mayfair Charcoal Grey 3-Piece', 'label-size-1')">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.55 0 8.25 3.7 8.25 8.25 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.1l-.29-.17-3.11.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.25-4.46c0-4.55 3.7-8.25 8.25-8.25m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.05-.1-.22-.16-.47-.29z"/></svg>
+              হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: The Bordeaux Tuscan Wine -->
+        <article class="suit-monograph-card" data-curation="wedding all">
+          <div class="card-top-tag">EDITION 02 • WEDDING GALA</div>
+          <div class="card-stock-indicator">স্টক: ৩টি বাকি</div>
+          <div class="photo-viewport" onclick="triggerFabricInspection('images/suit_maroon.webp')">
+            <img src="images/suit_maroon.webp" alt="The Bordeaux Tuscan Wine 3-Piece Suit" loading="lazy">
+            <div class="inspect-hover-btn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              INSPECT FABRIC
+            </div>
+          </div>
+          <div class="card-details-tray">
+            <h3 class="product-eng-title">The Bordeaux Wine</h3>
+            <div class="product-bn-subtitle">৩-পিস ওয়েডিং স্পেশাল ডিপ ওয়াইন</div>
+            <p class="product-narrative">
+              বিয়ের রিসেপশন, হলুদের জমকালো রাত কিংবা সন্ধ্যার গালা ডিনারে নজর কাড়ার সেরা পোশাক। ডিপ মেরুন লাক্সারি শাইনের সাথে ম্যাচিং ভেস্ট।
+            </p>
+            <div class="ensemble-pieces-pills">
+              <span class="piece-spec-pill">১x স্ট্রাকচার্ড ব্লেজার</span>
+              <span class="piece-spec-pill">১x ম্যাচিং ভেস্ট</span>
+              <span class="piece-spec-pill">১x স্লিম ট্রাউজার</span>
+            </div>
+
+            <div class="card-pricing-bar">
+              <div class="unit-pricing">
+                <span class="unit-price-now">৳৩,৫০০</span>
+                <span class="unit-price-was">৳৪,৫০০</span>
+              </div>
+              <span class="offer-savings-pill">সেভ ৳১,০০০</span>
+            </div>
+
+            <div class="sizing-header">
+              <span>SELECT SIZE:</span>
+              <span id="label-size-2" class="active-size-readout">Size: 38</span>
+            </div>
+            <div class="sizing-matrix" data-display-target="label-size-2">
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 36)">36</button>
+              <button type="button" class="size-option-pill active" onclick="pickAtelierSize(this, 38)">38</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 40)">40</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 42)">42</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 44)">44</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 46)">46</button>
+            </div>
+
+            <button class="btn-atelier-order" onclick="dispatchWhatsAppMemo('The Bordeaux Wine Wedding 3-Piece', 'label-size-2')">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.55 0 8.25 3.7 8.25 8.25 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.1l-.29-.17-3.11.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.25-4.46c0-4.55 3.7-8.25 8.25-8.25m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.05-.1-.22-.16-.47-.29z"/></svg>
+              হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: The Savile Jet Black -->
+        <article class="suit-monograph-card" data-curation="corporate wedding all">
+          <div class="card-top-tag">EDITION 03 • FORMAL ICON</div>
+          <div class="card-stock-indicator">স্টক: ৫টি বাকি</div>
+          <div class="photo-viewport" onclick="triggerFabricInspection('images/suit_black.webp')">
+            <img src="images/suit_black.webp" alt="The Savile Jet Black 3-Piece Suit" loading="lazy">
+            <div class="inspect-hover-btn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              INSPECT FABRIC
+            </div>
+          </div>
+          <div class="card-details-tray">
+            <h3 class="product-eng-title">The Savile Black</h3>
+            <div class="product-bn-subtitle">৩-পিস ক্লাসিক জেট ব্ল্যাক ফর্মাল</div>
+            <p class="product-narrative">
+              প্রতিটি সম্ভ্রান্ত পুরুষের আলমারির এক নম্বর রত্ন। ব্ল্যাক-টাই ইভেন্ট, সমাবর্তন, কিংবা ফর্মাল আয়োজনে সর্বজনীন আভিজাত্য।
+            </p>
+            <div class="ensemble-pieces-pills">
+              <span class="piece-spec-pill">১x স্ট্রাকচার্ড ব্লেজার</span>
+              <span class="piece-spec-pill">১x ম্যাচিং ভেস্ট</span>
+              <span class="piece-spec-pill">১x স্লিম ট্রাউজার</span>
+            </div>
+
+            <div class="card-pricing-bar">
+              <div class="unit-pricing">
+                <span class="unit-price-now">৳৩,৫০০</span>
+                <span class="unit-price-was">৳৪,৫০০</span>
+              </div>
+              <span class="offer-savings-pill">সেভ ৳১,০০০</span>
+            </div>
+
+            <div class="sizing-header">
+              <span>SELECT SIZE:</span>
+              <span id="label-size-3" class="active-size-readout">Size: 38</span>
+            </div>
+            <div class="sizing-matrix" data-display-target="label-size-3">
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 36)">36</button>
+              <button type="button" class="size-option-pill active" onclick="pickAtelierSize(this, 38)">38</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 40)">40</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 42)">42</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 44)">44</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 46)">46</button>
+            </div>
+
+            <button class="btn-atelier-order" onclick="dispatchWhatsAppMemo('The Savile Jet Black 3-Piece', 'label-size-3')">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.55 0 8.25 3.7 8.25 8.25 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.1l-.29-.17-3.11.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.25-4.46c0-4.55 3.7-8.25 8.25-8.25m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.05-.1-.22-.16-.47-.29z"/></svg>
+              হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 4: The Belgravia Midnight Navy -->
+        <article class="suit-monograph-card" data-curation="corporate all">
+          <div class="card-top-tag">EDITION 04 • EXECUTIVE</div>
+          <div class="card-stock-indicator">স্টক: ৪টি বাকি</div>
+          <div class="photo-viewport" onclick="triggerFabricInspection('images/suit_navy.webp')">
+            <img src="images/suit_navy.webp" alt="The Belgravia Midnight Navy 3-Piece Suit" loading="lazy">
+            <div class="inspect-hover-btn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              INSPECT FABRIC
+            </div>
+          </div>
+          <div class="card-details-tray">
+            <h3 class="product-eng-title">The Belgravia Navy</h3>
+            <div class="product-bn-subtitle">৩-পিস মিডনাইট নেভি ব্লু স্যুট</div>
+            <p class="product-narrative">
+              স্মার্ট বিজনেস লিডার ও আধুনিক এক্সিকিউটিভদের প্রিয় রঙ। দিন কিংবা রাতের আলোতে দেয় গভীর ও পরিশীলিত আভিজাত্য।
+            </p>
+            <div class="ensemble-pieces-pills">
+              <span class="piece-spec-pill">১x স্ট্রাকচার্ড ব্লেজার</span>
+              <span class="piece-spec-pill">১x ম্যাচিং ভেস্ট</span>
+              <span class="piece-spec-pill">১x স্লিম ট্রাউজার</span>
+            </div>
+
+            <div class="card-pricing-bar">
+              <div class="unit-pricing">
+                <span class="unit-price-now">৳৩,৫০০</span>
+                <span class="unit-price-was">৳৪,৫০০</span>
+              </div>
+              <span class="offer-savings-pill">সেভ ৳১,০০০</span>
+            </div>
+
+            <div class="sizing-header">
+              <span>SELECT SIZE:</span>
+              <span id="label-size-4" class="active-size-readout">Size: 38</span>
+            </div>
+            <div class="sizing-matrix" data-display-target="label-size-4">
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 36)">36</button>
+              <button type="button" class="size-option-pill active" onclick="pickAtelierSize(this, 38)">38</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 40)">40</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 42)">42</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 44)">44</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 46)">46</button>
+            </div>
+
+            <button class="btn-atelier-order" onclick="dispatchWhatsAppMemo('The Belgravia Midnight Navy 3-Piece', 'label-size-4')">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.55 0 8.25 3.7 8.25 8.25 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.1l-.29-.17-3.11.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.25-4.46c0-4.55 3.7-8.25 8.25-8.25m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.05-.1-.22-.16-.47-.29z"/></svg>
+              হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 5: The Sapphire Royal Blue -->
+        <article class="suit-monograph-card" data-curation="wedding all">
+          <div class="card-top-tag">EDITION 05 • ROYAL SPECIAL</div>
+          <div class="card-stock-indicator">স্টক: ২টি বাকি</div>
+          <div class="photo-viewport" onclick="triggerFabricInspection('images/suit_royalblue.webp')">
+            <img src="images/suit_royalblue.webp" alt="The Sapphire Royal Blue 3-Piece Suit" loading="lazy">
+            <div class="inspect-hover-btn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              INSPECT FABRIC
+            </div>
+          </div>
+          <div class="card-details-tray">
+            <h3 class="product-eng-title">The Royal Sapphire</h3>
+            <div class="product-bn-subtitle">৩-পিস ভাইব্রেন্ট রয়্যাল ব্লু</div>
+            <p class="product-narrative">
+              স্পেশাল ফটোশুট, ডেলাইট ওয়েডিং বা রাজকীয় সংবর্ধনায় সবচেয়ে উজ্জ্বল উপস্থিতি। সুষম রঙের দীপ্তি ও নিখুঁত ল্যাপেল আর্ট।
+            </p>
+            <div class="ensemble-pieces-pills">
+              <span class="piece-spec-pill">১x স্ট্রাকচার্ড ব্লেজার</span>
+              <span class="piece-spec-pill">১x ম্যাচিং ভেস্ট</span>
+              <span class="piece-spec-pill">১x স্লিম ট্রাউজার</span>
+            </div>
+
+            <div class="card-pricing-bar">
+              <div class="unit-pricing">
+                <span class="unit-price-now">৳৩,৫০০</span>
+                <span class="unit-price-was">৳৪,৫০০</span>
+              </div>
+              <span class="offer-savings-pill">সেভ ৳১,০০০</span>
+            </div>
+
+            <div class="sizing-header">
+              <span>SELECT SIZE:</span>
+              <span id="label-size-5" class="active-size-readout">Size: 38</span>
+            </div>
+            <div class="sizing-matrix" data-display-target="label-size-5">
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 36)">36</button>
+              <button type="button" class="size-option-pill active" onclick="pickAtelierSize(this, 38)">38</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 40)">40</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 42)">42</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 44)">44</button>
+              <button type="button" class="size-option-pill" onclick="pickAtelierSize(this, 46)">46</button>
+            </div>
+
+            <button class="btn-atelier-order" onclick="dispatchWhatsAppMemo('The Royal Sapphire Blue 3-Piece', 'label-size-5')">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.55 0 8.25 3.7 8.25 8.25 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.1l-.29-.17-3.11.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.25-4.46c0-4.55 3.7-8.25 8.25-8.25m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.25-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.05-.1-.22-.16-.47-.29z"/></svg>
+              হোয়াটসঅ্যাপে ১-ক্লিক অর্ডার
+            </button>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Verified Customer Reviews Section -->
-    <section class="reviews-section">
-      <div class="section-head">
-        <h2>⭐ সন্তুষ্ট ক্রেতাদের মতামত</h2>
-        <p>ঢাকার ভেতরে ও বাইরে আমাদের রেগুলার কাস্টমারদের বাস্তব অভিজ্ঞতা</p>
+    <!-- Atelier Craftsmanship Section (Pinterest Luxury Menswear Reference) -->
+    <section class="atelier-craft-section">
+      <div class="section-editorial-title" style="margin: 0 0 8px;">
+        <span class="kicker">ATELIER CRAFTSMANSHIP</span>
+        <h2>কেন Suit Gallery-র ৩-পিস স্যুট সেরা?</h2>
+        <p>বাজেট প্রাইসে সর্বোচ্চ ফেব্রিক মান ও স্যাভিল রো অনুপ্রাণিত আধুনিক ট্রিপল-পিস কাট</p>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"ছোট ভাইয়ের বিয়ের রিসেপশনের জন্য ডিপ মেরুন স্যুটটা নিয়েছিলাম। শোরুমের কাপড় আর সেলাই দেখে আত্মীয়স্বজন সবাই ভেবেছে কমপক্ষে ৮-১০ হাজার টাকার স্যুট। ৩,৫০০ টাকায় সত্যিই বেস্ট!"</p>
+
+      <div class="craft-quad-grid">
+        <div class="craft-tile">
+          <div class="craft-tile-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
           </div>
-          <div class="reviewer-meta">
-            <div class="reviewer-avatar">তা</div>
-            <div class="reviewer-info">
-              <h5>তানভীর আহমেদ</h5>
-              <p>উত্তরা, ঢাকা (Deep Maroon)</p>
-            </div>
-          </div>
+          <h4>ইতালিয়ান উল ব্লেন্ড</h4>
+          <p>দীর্ঘস্থায়ী শাইন ও ব্রিদেবল উপাদান যা দীর্ঘক্ষণ পরিধান করলেও ক্লান্তি বা গরম অনুভূত হয় না।</p>
         </div>
 
-        <div class="review-card">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"অফিসের বোর্ড মিটিংয়ের জন্য এক্সিকিউটিভ গ্রে ৩-পিস অর্ডার করেছিলাম। ২৪ ঘণ্টার ভেতর হোম ডেলিভারি পেয়েছি। স্যুটের ভেতরের লাইনিং আর বাটন কোয়ালিটি টপ নচ।"</p>
+        <div class="craft-tile">
+          <div class="craft-tile-icon">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           </div>
-          <div class="reviewer-meta">
-            <div class="reviewer-avatar">রি</div>
-            <div class="reviewer-info">
-              <h5>ব্যারিস্টার রিয়াদ হোসেন</h5>
-              <p>ধানমন্ডি, ঢাকা (Executive Grey)</p>
-            </div>
-          </div>
+          <h4>স্ট্রাকচার্ড ক্যানভাস</h4>
+          <p>বুকের অংশে ক্যানভাস ইন্টারলাইনিং যা বাবলিং প্রতিরোধ করে এবং বডি ফ্রেমকে চওড়া ও স্মার্ট দেখায়।</p>
         </div>
 
-        <div class="review-card">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"এলিফ্যান্ট রোডের দোকানে গিয়ে ট্রায়াল দিয়ে নিয়েছি। ওনারা খুব আন্তরিক এবং ট্রাউজারটা আমার মাপে সাথে সাথে হালকা অল্টার করে দিয়েছে। ফুল ৩-পিস সেট এত কমে পাওয়া অবিশ্বাস্য।"</p>
+        <div class="craft-tile">
+          <div class="craft-tile-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           </div>
-          <div class="reviewer-meta">
-            <div class="reviewer-avatar">শা</div>
-            <div class="reviewer-info">
-              <h5>শাকিল মাহমুদ</h5>
-              <p>মিরপুর-১০, ঢাকা (Classic Black)</p>
-            </div>
+          <h4>১০০% সাইজ এক্সচেঞ্জ</h4>
+          <p>বাসায় ট্রায়াল দিয়ে সাইজে সামান্য সমস্যা হলেও সম্পূর্ণ ফ্রিতে সাইজ এক্সচেঞ্জ করে দেওয়া হয়।</p>
+        </div>
+
+        <div class="craft-tile">
+          <div class="craft-tile-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           </div>
+          <h4>শোরুমে ফ্রি অল্টারেশন</h4>
+          <p>এলিফ্যান্ট রোডের শোরুমে সরাসরি ট্রায়াল দিয়ে অভিজ্ঞ ওস্তাদের দ্বারা পারফেক্ট মাপ করিয়ে নিতে পারেন।</p>
         </div>
       </div>
     </section>
 
-    <!-- Size Chart Table -->
-    <section class="size-chart-box">
-      <div class="section-head" style="margin-top: 0;">
-        <h2>📏 সাইজ চার্ট ও পরিমাপ নির্দেশিকা</h2>
-        <p>আপনার শরীরের মাপ অনুযায়ী সঠিক সাইজ বেছে নিন (সব পরিমাপ ইঞ্চিতে)</p>
+    <!-- Showroom Film Feature (Shopnil Vlogs) -->
+    <section class="showroom-film-box">
+      <div class="section-editorial-title" style="margin-top: 0;">
+        <span class="kicker">SHOWROOM VISIT FILM</span>
+        <h2>ভিডিওতে দেখুন শোরুম ও ফেব্রিক মান</h2>
+        <p>Shopnil Vlogs-এর অফিসিয়াল এলিফ্যান্ট রোড শোরুম রিভিউ ও কোয়ালিটি টেস্ট</p>
+      </div>
+      <div class="film-aspect-container">
+        <iframe src="https://www.youtube-nocookie.com/embed/-Q5veJiLvPw?rel=0" title="Suit Gallery Clothing House Showroom Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Size & Measurement Vault Table -->
+    <section class="tailor-measurement-vault">
+      <div class="section-editorial-title" style="margin-top: 0;">
+        <span class="kicker">BESPOKE MEASUREMENT GUIDE</span>
+        <h2>সুনির্দিষ্ট মাপ ও সাইজ চার্ট</h2>
+        <p>আপনার বডি সাইজ অনুযায়ী সঠিক মাপ বেছে নিন (প্রতিটি পরিমাপ ইঞ্চিতে)</p>
       </div>
       <div style="overflow-x: auto;">
-        <table class="size-table">
+        <table class="measurement-data-table">
           <thead>
             <tr>
               <th>সাইজ (Size)</th>
@@ -1529,42 +1507,42 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>36</strong></td>
+              <td><strong style="color: var(--accent-bronze-light);">36</strong></td>
               <td>৩৬" - ৩৭"</td>
               <td>১৭.৫"</td>
               <td>২৩.৫"</td>
               <td>৩০" - ৩১"</td>
             </tr>
             <tr>
-              <td><strong>38</strong></td>
+              <td><strong style="color: var(--accent-bronze-light);">38</strong></td>
               <td>৩৮" - ৩৯"</td>
               <td>১৮.০"</td>
               <td>২৪.০"</td>
               <td>৩২" - ৩৩"</td>
             </tr>
             <tr>
-              <td><strong>40</strong></td>
+              <td><strong style="color: var(--accent-bronze-light);">40</strong></td>
               <td>৪০" - ৪১"</td>
               <td>১৮.৫"</td>
               <td>২৪.৫"</td>
               <td>৩৪" - ৩৫"</td>
             </tr>
             <tr>
-              <td><strong>42</strong></td>
+              <td><strong style="color: var(--accent-bronze-light);">42</strong></td>
               <td>৪২" - ৪৩"</td>
               <td>১৯.০"</td>
               <td>২৫.০"</td>
               <td>৩৬" - ৩৭"</td>
             </tr>
             <tr>
-              <td><strong>44</strong></td>
+              <td><strong style="color: var(--accent-bronze-light);">44</strong></td>
               <td>৪৪" - ৪৫"</td>
               <td>১৯.৫"</td>
               <td>২৫.৫"</td>
               <td>৩৮" - ৩৯"</td>
             </tr>
             <tr>
-              <td><strong>46</strong></td>
+              <td><strong style="color: var(--accent-bronze-light);">46</strong></td>
               <td>৪৬" - ৪৭"</td>
               <td>২০.০"</td>
               <td>২৬.০"</td>
@@ -1573,98 +1551,50 @@
           </tbody>
         </table>
       </div>
-      <p style="font-size: 0.82rem; color: #94a3b8; text-align: center; margin-top: 14px;">
-        💡 <em>নোট: নিজস্ব বিশেষ মাপে বানাতে চাইলে আমাদের শোরুমে এসে ট্রায়াল বা নিজস্ব পরিমাপ হোয়াটসঅ্যাপে পাঠাতে পারেন।</em>
+      <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: center; margin-top: 14px;">
+        💡 <em>নোট: বিশেষ মাপে বানিয়ে নিতে চাইলে শোরুমে এসে সরাসরি মাপ দিন অথবা হোয়াটসঅ্যাপে নিজস্ব মেজারমেন্ট পাঠাতে পারেন।</em>
       </p>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="section-head">
-        <h2>❓ সচরাচর সাধারণ প্রশ্ন ও উত্তর</h2>
-        <p>অর্ডার করার আগে আপনার মনের সম্ভাব্য প্রশ্নের সহজ সমাধান</p>
-      </div>
-      
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>১. আমি কি ডেলিভারির সময় দেখে মূল্য পরিশোধ করতে পারব?</span>
-          <span>▼</span>
-        </div>
-        <div class="faq-answer">
-          জি হ্যাঁ! ঢাকা এবং ঢাকার বাইরে সারা বাংলাদেশে ক্যাশ অন ডেলিভারি সুবিধা রয়েছে। ডেলিভারি ম্যানের সামনে প্যাকেট চেক করে পেমেন্ট করার সুযোগ পাবেন।
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>২. সাইজে না মিললে কি পরিবর্তনের সুযোগ আছে?</span>
-          <span>▼</span>
-        </div>
-        <div class="faq-answer">
-          অবশ্যই! ডেলিভারি পাওয়ার পর ট্রায়াল দিয়ে যদি সাইজে কোনো অমিল পান, তাহলে ৪৮ ঘণ্টার মধ্যে আমাদের জানালেই আমরা ফ্রিতে সাইজ পরিবর্তন করে দেব।
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>৩. ৩,৫০০ টাকায় কি পুরো ৩-পিস সেটটি পাওয়া যাবে?</span>
-          <span>▼</span>
-        </div>
-        <div class="faq-answer">
-          জি হ্যাঁ! ৩,৫০০ টাকার স্পেশাল অফারে আপনি পাবেন: ১টি প্রিমিয়াম ব্লেজার কোট + ১টি ম্যাচিং ডিজাইনার ভেস্ট/ওয়েস্টকোট + ১টি ম্যাচিং ফর্মাল ট্রাউজার।
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>৪. শোরুমের সঠিক ঠিকানা কোনটি?</span>
-          <span>▼</span>
-        </div>
-        <div class="faq-answer">
-          আমাদের শোরুমটি নিউ এলিফ্যান্ট রোডের হাজী জয়নাল ভবনের নিচতলায় (দোকান নং ৫০/১৩)। প্রতিদিন সকাল ১০:০০ টা থেকে রাত ৯:০০ টা পর্যন্ত খোলা থাকে।
-        </div>
-      </div>
-    </section>
-
-    <!-- Showroom & Contact Card -->
-    <section class="showroom-box">
-      <div class="hero-badge">📍 শোরুম সরাসরি ভিজিট করুন</div>
+    <!-- Showroom Architectural Address Card -->
+    <section class="atelier-destination-card">
+      <div class="hero-edition-line" style="margin-bottom: 10px;">SHOWROOM DIRECTORY</div>
       <h3>Suit Gallery Clothing House</h3>
-      <p class="showroom-address">
-        শপ নং ৫০/১৩ (গ্রাউন্ড ফ্লোর), হাজী জয়নাল ভবন,<br>
+      <p class="destination-address-line">
+        দোকান নং ৫০/১৩ (গ্রাউন্ড ফ্লোর), হাজী জয়নাল ভবন,<br>
         নিউ এলিফ্যান্ট রোড, ঢাকা-১২০৫।<br>
-        <span style="font-size: 0.88rem; color: var(--accent-gold);">প্রতিদিন সকাল ১০:০০ টা থেকে রাত ৯:০০ টা পর্যন্ত খোলা</span>
+        <span style="font-size: 0.85rem; color: var(--accent-bronze); font-family: var(--font-sans); font-weight: 600;">HOURS: 10:00 AM — 09:00 PM (DAILY)</span>
       </p>
-      <div class="showroom-contacts">
-        <a href="tel:01778855772" class="contact-badge">
-          📞 01778-855772
+      <div class="destination-action-group">
+        <a href="tel:01778855772" class="destination-link-btn">
+          📞 কল দিন: 01778-855772
         </a>
-        <a href="tel:01874338852" class="contact-badge">
+        <a href="tel:01874338852" class="destination-link-btn">
           📞 01874-338852
         </a>
-        <a href="https://wa.me/8801778855772" target="_blank" class="contact-badge" style="background: rgba(22, 163, 74, 0.2); border-color: rgba(22, 163, 74, 0.4); color: #4ade80;">
+        <a href="https://wa.me/8801778855772" target="_blank" class="destination-link-btn" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
           💬 হোয়াটসঅ্যাপ চ্যাট
         </a>
-        <a href="https://web.facebook.com/SuiteGalleryClothingHouse/" target="_blank" class="contact-badge" style="background: rgba(37, 99, 235, 0.2); border-color: rgba(37, 99, 235, 0.4); color: #60a5fa;">
-          🌐 অফিসিয়াল ফেসবুক পেজ
+        <a href="https://web.facebook.com/SuiteGalleryClothingHouse/" target="_blank" class="destination-link-btn">
+          🌐 অফিশিয়াল ফেসবুক পেজ
         </a>
       </div>
     </section>
 
-    <!-- ==========================================
-         DEDICATED CRYPTOWEBBUILD BACKLINK CARD
-         ========================================== -->
-    <section class="cryptowebbuild-hero-card">
-      <div class="demo-live-badge" style="margin-bottom: 10px;">POWERED BY CRYPTOWEBBUILD</div>
-      <h4>আপনার শপের জন্যও কি এমন হাই-কনভার্টিং সেলস ওয়েবসাইট চান?</h4>
+    <!-- ========================================================
+         CRYPTOWEBBUILD BESPOKE SIGNATURE & OFFICIAL BACKLINK
+         ======================================================== -->
+    <section class="cwb-signature-monument">
+      <div class="cwb-tagline-kicker">ENGINEERED BY CRYPTOWEBBUILD</div>
+      <h4>আপনার বিজনেসের জন্যও কি এমন হাই-কনভার্টিং লাক্সারি ওয়েবসাইট চান?</h4>
       <p>
-        ইনবক্সের ভিড় সামলাতে এবং ফেসবুকের চেয়ে ৩ গুণ দ্রুত অর্ডার নিতে আজই আপনার বিজনেসের জন্য ১-পেজের আল্ট্রা-ফাস্ট মোবাইল ক্যাটালগ তৈরি করে নিন।
+        ফেসবুক ইনবক্সের ভিড় কমিয়ে ক্রেতাকে ১-ক্লিকে হোয়াটসঅ্যাপে মেমো পাঠাতে এবং সেলস ৩ গুণ বৃদ্ধি করতে আজই আপনার শোরুমের জন্য নিজস্ব মোবাইল ক্যাটালগ তৈরি করে নিন।
       </p>
-      <div class="cwb-action-wrap">
-        <a href="https://cryptowebbuild.com" target="_blank" rel="noopener noreferrer" class="btn-cwb-main">
+      <div class="cwb-portal-actions">
+        <a href="https://cryptowebbuild.com" target="_blank" rel="noopener noreferrer" class="cwb-official-portal-btn">
           🌐 Visit CryptoWebBuild.com ↗
         </a>
-        <a href="https://wa.me/8801977052842" target="_blank" class="btn-cwb-wa">
+        <a href="https://wa.me/8801977052842" target="_blank" class="cwb-sagor-wa-btn">
           💬 সাগরের সাথে কথা বলুন (01977052842)
         </a>
       </div>
@@ -1676,81 +1606,66 @@
   <footer>
     <p>© 2026 Suit Gallery Clothing House. সর্বস্বত্ব সংরক্ষিত।</p>
     <p style="margin-top: 6px;">
-      Designed & Scaled by <a href="https://cryptowebbuild.com" target="_blank" rel="noopener noreferrer">CryptoWebBuild (cryptowebbuild.com)</a> | 
-      <a href="https://wa.me/8801977052842" target="_blank">WhatsApp: 01977052842</a>
+      Bespoke Architecture by <a href="https://cryptowebbuild.com" target="_blank" rel="noopener noreferrer">CryptoWebBuild.com</a> | 
+      <a href="https://wa.me/8801977052842" target="_blank">Direct Line: 01977052842</a>
     </p>
   </footer>
 
-  <!-- Sticky Bottom Quick Action Bar -->
-  <div class="sticky-bar">
-    <a href="tel:01778855772" class="btn-sticky-call">
+  <!-- Sticky Bottom Mobile Action Bar -->
+  <div class="tactile-bottom-bar">
+    <a href="tel:01778855772" class="btn-tactile-dial">
       📞 সরাসরি কল দিন
     </a>
-    <a href="https://wa.me/8801778855772" target="_blank" class="btn-sticky-wa">
+    <a href="https://wa.me/8801778855772" target="_blank" class="btn-tactile-order">
       💬 হোয়াটসঅ্যাপে অর্ডার
     </a>
   </div>
 
-  <!-- Social Proof Live Toast -->
-  <div id="live-toast" class="toast-live-order" style="display: none;">
-    <img id="toast-img" src="images/suit_grey.webp" alt="Suit" class="toast-img">
-    <div class="toast-text">
-      <strong id="toast-buyer">শাকিল ভাই (মিরপুর)</strong><br>
-      <span id="toast-item">Executive Grey (Size: 40) অর্ডার করেছেন</span><br>
-      <span class="toast-time">⚡ মাত্র কিছুক্ষণ আগে</span>
-    </div>
-  </div>
-
-  <!-- Fullscreen Lightbox Modal -->
-  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-      <img id="lightbox-img" src="" alt="Enlarged view">
+  <!-- Fabric Inspection Lightbox Modal -->
+  <div id="fabric-lightbox" class="fabric-lightbox-modal" onclick="dismissFabricInspection()">
+    <button class="lightbox-dismiss" onclick="dismissFabricInspection()">&times;</button>
+    <div class="lightbox-canvas-frame" onclick="event.stopPropagation()">
+      <img id="lightbox-target-img" src="" alt="High resolution fabric view">
     </div>
   </div>
 
   <script>
-    // Size selection handler
-    function selectSize(element, size) {
-      const parent = element.parentElement;
-      const displayId = parent.getAttribute('data-display');
+    // Size Selection Handler
+    function pickAtelierSize(pillElement, sizeValue) {
+      const parentContainer = pillElement.parentElement;
+      const displayId = parentContainer.getAttribute('data-display-target');
       
-      // Update active chip
-      parent.querySelectorAll('.size-chip').forEach(chip => chip.classList.remove('selected'));
-      element.classList.add('selected');
+      parentContainer.querySelectorAll('.size-option-pill').forEach(btn => btn.classList.remove('active'));
+      pillElement.classList.add('active');
       
-      // Update label
-      const displayElem = document.getElementById(displayId);
-      if (displayElem) {
-        displayElem.innerText = `Size: ${size}`;
+      const label = document.getElementById(displayId);
+      if (label) {
+        label.innerText = `Size: ${sizeValue}`;
       }
     }
 
     // 1-Click WhatsApp Order Builder
-    function orderOnWhatsApp(productName, displayId) {
+    function dispatchWhatsAppMemo(suitTitle, displayId) {
       const displayElem = document.getElementById(displayId);
       const sizeText = displayElem ? displayElem.innerText : 'Size: 38';
       const cleanSize = sizeText.replace('Size: ', '');
       
-      const message = `আসসালামু আলাইকুম Suit Gallery Clothing House,\n\nআমি আপনাদের ওয়েবসাইট থেকে ৩-পিস স্যুট অর্ডার করতে চাই:\n• প্রোডাক্ট: ${productName}\n• নির্বাচিত সাইজ: ${cleanSize}\n• অফার প্রাইস: ৩,৫০০ টাকা (কমপ্লিট কোট+ভেস্ট+প্যান্ট সেট)\n\nআমার ডেলিভারি কনফার্মেশন ও পেমেন্ট প্রসেস জানাবেন প্লিজ।`;
+      const memo = `আসসালামু আলাইকুম Suit Gallery Clothing House,\n\nআমি আপনাদের ওয়েবসাইট থেকে ৩-পিস স্যুট অর্ডার করতে চাই:\n• মডেল: ${suitTitle}\n• নির্বাচিত সাইজ: ${cleanSize}\n• অফার প্রাইস: ৩,৫০০ টাকা (কমপ্লিট কোট+ভেস্ট+ট্রাউজার)\n\nআমার ডেলিভারি প্রসেস ও মেজারমেন্ট কনফার্ম করবেন প্লিজ।`;
       
-      const encodedMsg = encodeURIComponent(message);
-      const waUrl = `https://wa.me/8801778855772?text=${encodedMsg}`;
-      window.open(waUrl, '_blank');
+      const url = `https://wa.me/8801778855772?text=${encodeURIComponent(memo)}`;
+      window.open(url, '_blank');
     }
 
-    // Category filter tabs
-    function filterSuits(category, event) {
-      const buttons = document.querySelectorAll('.tab-btn');
-      buttons.forEach(b => b.classList.remove('active'));
-      if (event && event.target) {
-        event.target.classList.add('active');
+    // Collection Filter
+    function applyCollectionFilter(filterKey, evt) {
+      document.querySelectorAll('.filter-tab-pill').forEach(btn => btn.classList.remove('active'));
+      if (evt && evt.target) {
+        evt.target.classList.add('active');
       }
 
-      const cards = document.querySelectorAll('.product-card');
-      cards.forEach(card => {
-        const catData = card.getAttribute('data-category');
-        if (category === 'all' || catData.includes(category)) {
+      document.querySelectorAll('.suit-monograph-card').forEach(card => {
+        const cat = card.getAttribute('data-curation');
+        if (filterKey === 'all' || cat.includes(filterKey)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -1758,53 +1673,20 @@
       });
     }
 
-    // Fullscreen Lightbox
-    function openLightbox(src) {
-      const modal = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
+    // Fabric Lightbox
+    function triggerFabricInspection(imgUrl) {
+      const modal = document.getElementById('fabric-lightbox');
+      document.getElementById('lightbox-target-img').src = imgUrl;
       modal.classList.add('active');
     }
 
-    function closeLightbox() {
-      const modal = document.getElementById('lightbox');
-      modal.classList.remove('active');
+    function dismissFabricInspection() {
+      document.getElementById('fabric-lightbox').classList.remove('active');
     }
 
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'Escape') dismissFabricInspection();
     });
-
-    // Social Proof Toast simulation
-    const buyers = [
-      { name: "শাকিল ভাই (মিরপুর)", item: "Executive Grey (Size: 40)", img: "images/suit_grey.webp" },
-      { name: "তানভীর আহমেদ (উত্তরা)", item: "Deep Maroon Wedding (Size: 38)", img: "images/suit_maroon.webp" },
-      { name: "ব্যারিস্টার রিয়াদ (ধানমন্ডি)", item: "Classic Jet Black (Size: 42)", img: "images/suit_black.webp" },
-      { name: "ফারহান কবীর (গুলশান)", item: "Midnight Navy (Size: 38)", img: "images/suit_navy.webp" }
-    ];
-
-    let currentBuyerIdx = 0;
-    function showToast() {
-      const toast = document.getElementById('live-toast');
-      const b = buyers[currentBuyerIdx];
-      document.getElementById('toast-buyer').innerText = b.name;
-      document.getElementById('toast-item').innerText = b.item + ' অর্ডার করেছেন';
-      document.getElementById('toast-img').src = b.img;
-      
-      toast.style.display = 'flex';
-      
-      setTimeout(() => {
-        toast.style.display = 'none';
-      }, 4000);
-      
-      currentBuyerIdx = (currentBuyerIdx + 1) % buyers.length;
-    }
-
-    // Run first toast after 4s, then every 16s
-    setTimeout(() => {
-      showToast();
-      setInterval(showToast, 16000);
-    }, 4000);
   </script>
 
 </body>
