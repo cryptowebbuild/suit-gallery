@@ -16,26 +16,32 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            royal: {
-              950: '#070709',
-              900: '#101015',
-              850: '#171720',
-              800: '#20202c',
-              700: '#2f2f40'
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
             },
             gold: {
-              100: '#fdf7d5',
-              200: '#faeca8',
-              300: '#f3d978',
-              400: '#e5c453',
-              500: '#d4af37',
-              600: '#b38b2d',
-              700: '#846624',
-              800: '#5a461b'
+              50: '#faf8f0',
+              100: '#f4eed8',
+              200: '#e8dcaf',
+              300: '#d9c47e',
+              400: '#c7a94d',
+              500: '#b8860b',
+              600: '#9b6c08',
+              700: '#7a5109',
+              800: '#5a3b0b',
+              900: '#3e2808'
             }
           },
           fontFamily: {
@@ -52,151 +58,180 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
+    /* Mobile-first, zero-lag, ultra-crisp styling */
     body {
       font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
-      background-color: #070709;
-      color: #f3f4f6;
+      background-color: #f8fafc;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
     }
+    
+    /* Hardware-accelerated smooth scrolling without jitter */
+    html {
+      scroll-behavior: smooth;
+    }
+
     .gold-gradient-text {
-      background: linear-gradient(135deg, #fdf7d5 0%, #d4af37 50%, #b38b2d 100%);
+      background: linear-gradient(135deg, #92400e 0%, #b45309 35%, #d97706 70%, #b8860b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .badge-blur {
-      backdrop-filter: blur(14px);
-      background: rgba(16, 16, 21, 0.88);
+
+    /* Fast, solid navigation - NO backdrop blur for zero mobile GPU lag */
+    .solid-navbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
-    .gold-card-glow {
-      box-shadow: 0 0 35px rgba(212, 175, 55, 0.12);
+
+    .solid-bottom-bar {
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
     }
-    .pulse-glow {
-      animation: pulseGlow 2.2s infinite;
+
+    .luxury-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+      border-radius: 1.25rem;
     }
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-      50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
-    }
+
     .active-thumb {
-      border-color: #d4af37 !important;
-      box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+      border-color: #d97706 !important;
+      box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.3) !important;
+    }
+
+    /* Off-screen paint containment for instant smooth scrolling */
+    .content-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 500px;
     }
   </style>
 </head>
-<body class="min-h-screen pb-28 text-gray-100">
+<body class="min-h-screen pb-24 text-slate-800 bg-[#f8fafc]">
 
-  <!-- Top Announcement Bar (Subtle & Elegant) -->
-  <div class="bg-gradient-to-r from-gold-800 via-gold-600 to-gold-800 text-royal-950 font-bold text-xs md:text-sm py-2 px-4 text-center tracking-wide shadow-md flex items-center justify-center gap-2">
-    <span>👑 নিউ এলিফ্যান্ট রোড হাজী জয়নাল ভবন শোরুম | প্রিমিয়াম ৩-পিস স্যুট মাত্র ৩,৫০০ টাকা! সারা দেশে ক্যাশ অন ডেলিভারি</span>
+  <!-- Top Announcement Bar (Ujjol Golden Ribbon) -->
+  <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-white font-bold text-[11px] sm:text-xs md:text-sm py-2 px-3 text-center tracking-wide shadow-sm flex items-center justify-center gap-1.5">
+    <span>👑 নিউ এলিফ্যান্ট রোড হাজী জয়নাল ভবন শোরুম • ৩-পিস স্যুট মাত্র ৩,৫০০৳ • সারা দেশে ক্যাশ অন ডেলিভারি</span>
   </div>
 
-  <!-- Header / Navbar -->
-  <header class="sticky top-0 z-50 badge-blur border-b border-gold-500/20 px-4 py-3">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-full overflow-hidden border border-gold-500/40 shadow-lg ring-2 ring-gold-400/30 flex-shrink-0 bg-royal-950 flex items-center justify-center">
-          <img src="images/logo_badge.webp" alt="Suit Gallery Emblem" class="w-full h-full object-cover">
+  <!-- Header / Navbar (Clean, Bright, Zero-Lag) -->
+  <header class="sticky top-0 z-40 solid-navbar px-3.5 py-2.5">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-2">
+      
+      <!-- Brand Logo & Name -->
+      <div class="flex items-center gap-2.5 min-w-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-amber-400 shadow-sm flex-shrink-0 bg-white">
+          <img src="images/logo_badge.webp" alt="Suit Gallery" class="w-full h-full object-cover">
         </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-lg md:text-xl font-extrabold tracking-tight gold-gradient-text font-serif leading-none">SUIT GALLERY</h1>
-            <span class="text-[10px] bg-red-600/20 text-red-400 border border-red-500/30 px-2 py-0.5 rounded-full font-mono font-bold">ডেমো</span>
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5">
+            <h1 class="text-base sm:text-lg font-black tracking-tight text-slate-900 font-serif leading-none truncate">
+              SUIT GALLERY
+            </h1>
+            <span class="text-[9px] sm:text-[10px] bg-red-50 text-red-600 border border-red-200 px-1.5 py-0.2 rounded-md font-mono font-bold flex-shrink-0">
+              ডেমো
+            </span>
           </div>
-          <p class="text-[11px] md:text-xs text-gold-300/80 font-medium mt-0.5">স্যুট গ্যালারি • নিউ এলিফ্যান্ট রোড, ঢাকা</p>
+          <p class="text-[10px] sm:text-xs text-slate-500 font-medium truncate mt-0.5">
+            এলিফ্যান্ট রোড শোরুম • ঢাকা
+          </p>
         </div>
       </div>
       
-      <!-- Dual WhatsApp Header Links -->
-      <div class="flex items-center gap-1.5 md:gap-2">
-        <a href="https://wa.me/8801778855772" target="_blank" class="flex items-center gap-1 bg-[#25D366] hover:bg-[#20ba5a] text-royal-950 px-3 py-1.5 rounded-full text-xs font-bold shadow-md transition">
-          <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-royal-950"></i>
-          <span>WHATSAPP ১</span>
+      <!-- Dual WhatsApp Header Links (Compact & Touch Friendly) -->
+      <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+        <a href="https://wa.me/8801778855772" target="_blank" class="flex items-center gap-1 bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 px-2.5 sm:px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-bold shadow-sm transition active:scale-95">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-slate-950"></i>
+          <span>WA ১</span>
         </a>
-        <a href="https://wa.me/8801874338852" target="_blank" class="flex items-center gap-1 bg-gradient-to-r from-gold-500 to-gold-600 hover:brightness-110 text-royal-950 px-3 py-1.5 rounded-full text-xs font-bold shadow-md transition">
-          <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-royal-950"></i>
-          <span>WHATSAPP ২</span>
+        <a href="https://wa.me/8801874338852" target="_blank" class="flex items-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 hover:brightness-105 text-white px-2.5 sm:px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-bold shadow-sm transition active:scale-95">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-white"></i>
+          <span>WA ২</span>
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- Hero Spotlight: The Signature Edition 2026 -->
-  <section class="px-4 pt-6 pb-8 max-w-5xl mx-auto">
+  <!-- Hero Section -->
+  <section class="px-3.5 pt-5 pb-6 max-w-5xl mx-auto">
     
-    <div class="text-center mb-6">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold mb-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <!-- Title & Value Badge -->
+    <div class="text-center mb-5">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] sm:text-xs font-bold mb-2 shadow-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
         এলিফ্যান্ট রোড সিগনেচার ড্রপ ২০২৬ • এক্সক্লুসিভ ৩-পিস স্যুট
       </div>
-      <h2 class="text-2xl md:text-4xl font-extrabold text-white leading-tight font-serif">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight font-serif">
         হাজী জয়নাল ভবনের ঐতিহ্যবাহী <br class="hidden sm:block">
         <span class="gold-gradient-text">প্রিমিয়াম ৩-পিস স্যুট কালেকশন</span>
       </h2>
-      <p class="text-xs md:text-sm text-gray-300 mt-2 max-w-xl mx-auto leading-relaxed">
-        বিয়ের জমকালো উৎসব, রিসেপশন কিংবা অফিশিয়াল মিটিং—নিখুঁত ড্রপ-৬ আধুনিক কাট, ইতালিয়ান উল ব্লেন্ড ফেব্রিক ও ক্যানভাস শোল্ডার স্ট্রাকচারে তৈরি কমপ্লিট স্যুট সেট।
+      <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-xl mx-auto leading-relaxed">
+        বিয়ের উৎসব, রিসেপশন কিংবা অফিশিয়াল মিটিং—নিখুঁত ড্রপ-৬ আধুনিক স্লিম কাট, ইতালিয়ান উল ব্লেন্ড ফেব্রিক ও ক্যানভাস শোল্ডার স্ট্রাকচারে তৈরি ফুল কমপ্লিট সেট।
       </p>
     </div>
 
     <!-- Grand Showcase Display: 5-Suit Royal Studio Lineup -->
-    <div class="relative rounded-3xl overflow-hidden border border-gold-500/30 shadow-2xl mb-8 group bg-royal-950">
-      <img src="images/hero_lineup.webp" alt="Suit Gallery 5-Suit Royal Studio Collection" class="w-full h-auto object-cover group-hover:scale-[1.01] transition duration-700">
-      <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/20 to-transparent flex flex-col justify-end p-4 md:p-6">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-          <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500 text-royal-950 text-xs font-black shadow mb-2">
-              <i data-lucide="crown" class="w-3.5 h-3.5"></i>
-              <span>সিগনেচার ৫-কালার ড্রপ ২০২৬</span>
-            </div>
-            <h3 class="text-lg md:text-2xl font-black text-white font-serif leading-tight">
-              চারকোল গ্রে • মিডনাইট নেভি • রয়্যাল ব্লু • ডিপ ওয়াইন • ক্লাসিক ব্ল্যাক
-            </h3>
-            <p class="text-xs md:text-sm text-gold-300 font-medium mt-1">
-              কমপ্লিট ৩-পিস স্যুট (ব্লেজার কোট + ভেস্ট + ট্রাউজার) মাত্র ৩,৫০০ টাকায়!
-            </p>
+    <div class="luxury-card overflow-hidden border border-amber-200/90 shadow-md mb-6 bg-white">
+      <div class="relative aspect-[935/1024] sm:aspect-[16/10] md:aspect-[16/9] bg-amber-50/40 overflow-hidden">
+        <img src="images/hero_lineup.webp" alt="Suit Gallery 5-Suit Royal Studio Collection" class="w-full h-full object-cover sm:object-contain md:object-cover" loading="eager">
+      </div>
+      <div class="p-3.5 sm:p-4 bg-gradient-to-r from-amber-50/80 via-white to-amber-50/80 border-t border-amber-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-amber-700 font-bold text-xs">
+            <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>সিগনেচার ৫-কালার কালেকশন ডিসপ্লে</span>
           </div>
-          <div class="flex items-center gap-2">
-            <a href="#catalogGrid" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:brightness-110 text-royal-950 font-bold px-4 py-2.5 rounded-xl text-xs shadow-lg transition">
-              <span>ক্যাটালগ দেখুন</span>
-              <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5">
+            চারকোল গ্রে • ডিপ ওয়াইন • মিডনাইট নেভি • রয়্যাল ব্লু • ক্লাসিক ব্ল্যাক
+          </p>
         </div>
+        <a href="#catalogSection" class="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white font-bold px-3.5 py-2 rounded-xl text-xs shadow-sm transition active:scale-95 w-full sm:w-auto justify-center">
+          <span>সব কালেকশন দেখুন</span>
+          <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+        </a>
       </div>
     </div>
 
-    <!-- Spotlight Product Showcase Card -->
-    <div class="bg-gradient-to-br from-royal-900 via-royal-850 to-royal-900 border border-gold-500/30 rounded-3xl p-4 md:p-6 shadow-2xl gold-card-glow">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+    <!-- Spotlight Product Showcase Card (Bright, Luxury, High Contrast) -->
+    <div class="luxury-card p-4 sm:p-6 border border-amber-200/80 shadow-lg bg-white">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
         
         <!-- Interactive Gallery (Left Column) -->
         <div class="lg:col-span-6 flex flex-col gap-3">
-          <div class="relative aspect-[10/11] bg-royal-950 rounded-2xl overflow-hidden border border-gold-500/25 shadow-inner">
-            <img id="mainSpotlightImg" src="images/suit_grey.webp" alt="Suit Gallery Premium 3-Piece" class="w-full h-full object-cover transition-opacity duration-300">
+          
+          <!-- Main Showcase Image -->
+          <div class="relative aspect-[10/11] bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-inner">
+            <img id="mainSpotlightImg" src="images/suit_grey.webp" alt="Suit Gallery Premium 3-Piece" class="w-full h-full object-cover transition-opacity duration-200" loading="eager">
             
-            <div class="absolute top-3 left-3 bg-gradient-to-r from-gold-500 to-gold-600 text-royal-950 text-xs font-black px-3 py-1 rounded-full shadow-lg">
+            <div class="absolute top-2.5 left-2.5 bg-amber-500 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
               ✨ অফিশিয়াল সিগনেচার
             </div>
-            <div id="spotlightCode" class="absolute bottom-3 right-3 bg-black/80 backdrop-blur text-gold-300 text-xs font-mono px-3 py-1 rounded-lg border border-gold-500/30">
+            <div id="spotlightCode" class="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-800 text-xs font-mono font-bold px-2.5 py-1 rounded-lg border border-slate-200 shadow-sm">
               #SG-ROYAL-01
             </div>
           </div>
 
-          <!-- Thumbnail Switcher Buttons -->
-          <div class="grid grid-cols-4 gap-2">
-            <button type="button" onclick="switchSpotlight('images/suit_grey.webp', 'The Mayfair Charcoal Grey', '#SG-ROYAL-01', this)" class="spotlight-thumb active-thumb aspect-video rounded-xl overflow-hidden border-2 border-gold-400 shadow-md relative group">
-              <img src="images/suit_grey.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">চারকোল গ্রে</div>
+          <!-- Thumbnail Switcher Buttons (4-way) -->
+          <div class="grid grid-cols-4 gap-1.5 sm:gap-2">
+            <button type="button" onclick="switchSpotlight('images/suit_grey.webp', 'The Mayfair Charcoal Grey', '#SG-ROYAL-01', this)" class="spotlight-thumb active-thumb aspect-video rounded-xl overflow-hidden border-2 border-slate-200 transition relative">
+              <img src="images/suit_grey.webp" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-black/35 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">চারকোল গ্রে</div>
             </button>
-            <button type="button" onclick="switchSpotlight('images/suit_maroon.webp', 'The Bordeaux Tuscan Wine', '#SG-ROYAL-02', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group">
-              <img src="images/suit_maroon.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">ডিপ ওয়াইন</div>
+            <button type="button" onclick="switchSpotlight('images/suit_maroon.webp', 'The Bordeaux Tuscan Wine', '#SG-ROYAL-02', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-slate-200 hover:border-amber-400 transition relative">
+              <img src="images/suit_maroon.webp" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-black/35 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">ডিপ ওয়াইন</div>
             </button>
-            <button type="button" onclick="switchSpotlight('images/hero_lineup.webp', 'Suit Gallery 5-Color Royal Lineup', '#SG-ROYAL-ALL', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group">
-              <img src="images/hero_lineup.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">৫-কালার সেট</div>
+            <button type="button" onclick="switchSpotlight('images/hero_lineup.webp', 'Suit Gallery 5-Color Royal Lineup', '#SG-ROYAL-ALL', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-slate-200 hover:border-amber-400 transition relative">
+              <img src="images/hero_lineup.webp" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-black/35 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">৫-কালার সেট</div>
             </button>
-            <button type="button" onclick="switchSpotlight('images/suit_black.webp', 'The Savile Jet Black', '#SG-ROYAL-03', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group">
-              <img src="images/suit_black.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">জেট ব্ল্যাক</div>
+            <button type="button" onclick="switchSpotlight('images/suit_black.webp', 'The Savile Jet Black', '#SG-ROYAL-03', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-slate-200 hover:border-amber-400 transition relative">
+              <img src="images/suit_black.webp" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-black/35 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">জেট ব্ল্যাক</div>
             </button>
           </div>
         </div>
@@ -204,81 +239,83 @@
         <!-- Details & Dual Sizing (Right Column) -->
         <div class="lg:col-span-6 flex flex-col justify-between h-full">
           <div>
-            <div class="flex items-center gap-2 mb-2">
-              <span class="bg-red-600/20 text-red-400 border border-red-500/30 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="bg-red-50 text-red-600 border border-red-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
                 🔥 উইন্টার ও ওয়েডিং মেগা অফার
               </span>
-              <span class="text-xs text-gray-400">স্টক সীমিত</span>
+              <span class="text-xs text-slate-500 font-medium">স্টক সীমিত</span>
             </div>
 
-            <h3 id="spotlightTitle" class="text-xl md:text-2xl font-black text-white leading-snug">
+            <h3 id="spotlightTitle" class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
               The Mayfair Charcoal Grey
             </h3>
-            <p class="text-xs md:text-sm text-gold-300 font-semibold mb-3">কমপ্লিট ৩-পিস সেট: ব্লেজার কোট + ম্যাচিং ভেস্ট + ফর্মাল ট্রাউজার</p>
+            <p class="text-xs sm:text-sm text-amber-700 font-bold mb-3">
+              কমপ্লিট ৩-পিস সেট: ব্লেজার কোট + ম্যাচিং ভেস্ট + ফর্মাল ট্রাউজার
+            </p>
 
-            <!-- Pricing Box -->
-            <div class="bg-royal-950/80 border border-gold-500/20 rounded-2xl p-4 mb-4 flex items-center justify-between">
+            <!-- Pricing Box (Clean, Bright, Ivory Accent) -->
+            <div class="bg-gradient-to-r from-amber-50/90 via-amber-50/50 to-white border border-amber-200 rounded-2xl p-3.5 sm:p-4 mb-4 flex items-center justify-between shadow-xs">
               <div>
-                <span class="text-xs text-gray-400 block">কমপ্লিট সেটের অফার মূল্য</span>
+                <span class="text-[11px] sm:text-xs text-slate-600 block font-medium">কমপ্লিট ৩-পিস সেটের মূল্য</span>
                 <div class="flex items-baseline gap-2 mt-0.5">
-                  <span class="text-2xl md:text-3xl font-extrabold text-gold-400 font-serif">৳৩,৫০০</span>
-                  <span class="text-xs md:text-sm text-gray-500 line-through">৳৪,৫০০</span>
+                  <span class="text-2xl sm:text-3xl font-black text-amber-700 font-serif">৳৩,৫০০</span>
+                  <span class="text-xs sm:text-sm text-slate-400 line-through">৳৪,৫০০</span>
                 </div>
               </div>
               <div class="text-right">
-                <span class="inline-block bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full">
+                <span class="inline-block bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full">
                   ৳১,০০০ সাশ্রয়
                 </span>
-                <span class="text-[11px] text-gray-400 block mt-1">✓ ১০০% ফ্রি সাইজ এক্সচেঞ্জ</span>
+                <span class="text-[10px] sm:text-[11px] text-slate-500 font-medium block mt-1">✓ ফ্রি সাইজ এক্সচেঞ্জ</span>
               </div>
             </div>
 
             <!-- Bullet Highlights -->
-            <div class="space-y-2 mb-4 text-xs md:text-sm text-gray-300">
-              <div class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
-                <span><strong>ইতালিয়ান উল ব্লেন্ড ফেব্রিক:</strong> রিঙ্কেল-ফ্রি, দীর্ঘস্থায়ী শাইন ও প্রিমিয়াম কমফোর্ট।</span>
+            <div class="space-y-1.5 mb-4 text-xs sm:text-sm text-slate-700">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+                <span><strong>ইতালিয়ান উল ব্লেন্ড:</strong> রিঙ্কেল-ফ্রি, দীর্ঘস্থায়ী শাইন ও ব্রিদেবল আরাম।</span>
               </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
-                <span><strong>ক্যানভাস শোল্ডার স্ট্রাকচার:</strong> আধুনিক ড্রপ-৬ স্লিম ফিটিং ও পারফেক্ট শোল্ডার কাট।</span>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+                <span><strong>ক্যানভাস শোল্ডার স্ট্রাকচার:</strong> নিখুঁত ড্রপ-৬ কাট ও বডি শেপিং ফিটিং।</span>
               </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
-                <span><strong>কমপ্লিট ৩-পিস সেট:</strong> আলাদা কোনো খরচ নেই, পুরো ৩-পিস সেট এক সাথে পাবেন।</span>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+                <span><strong>কমপ্লিট ৩-পিস সেট:</strong> ব্লেজার + ভেস্ট + ট্রাউজার একসাথে পাবেন।</span>
               </div>
             </div>
 
             <!-- DUAL SIZE SELECTOR: BLAZER (32-42) & PANT WAIST (30-40) -->
-            <div class="bg-royal-950/60 border border-gold-500/15 rounded-2xl p-3.5 mb-5 space-y-3">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3.5 mb-4 space-y-3">
               
               <!-- 1. Blazer Size Selector (32 to 42) -->
               <div>
                 <div class="flex items-center justify-between text-xs mb-1.5">
-                  <span class="font-bold text-white flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-gold-400"></span> ১. ব্লেজার সাইজ নির্বাচন করুন:
+                  <span class="font-bold text-slate-900 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span> ১. ব্লেজার সাইজ (বুক):
                   </span>
-                  <button type="button" onclick="openSizeGuide()" class="text-gold-400 hover:underline flex items-center gap-1 font-medium text-[11px]">
+                  <button type="button" onclick="openSizeGuide()" class="text-amber-700 hover:underline flex items-center gap-1 font-bold text-[11px]">
                     <i data-lucide="ruler" class="w-3.5 h-3.5"></i> সাইজ চার্ট
                   </button>
                 </div>
                 <div class="grid grid-cols-6 gap-1.5" id="heroBlazerSizeGrid">
-                  <button type="button" onclick="selectHeroBlazerSize('৩২', this)" class="hero-blazer-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroBlazerSize('৩২', this)" class="hero-blazer-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩২
                   </button>
-                  <button type="button" onclick="selectHeroBlazerSize('৩৪', this)" class="hero-blazer-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroBlazerSize('৩৪', this)" class="hero-blazer-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩৪
                   </button>
-                  <button type="button" onclick="selectHeroBlazerSize('৩৬', this)" class="hero-blazer-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroBlazerSize('৩৬', this)" class="hero-blazer-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩৬
                   </button>
-                  <button type="button" onclick="selectHeroBlazerSize('৩৮', this)" class="hero-blazer-btn py-1.5 rounded-lg border border-gold-500 bg-gold-500 text-royal-950 font-bold transition text-center shadow">
+                  <button type="button" onclick="selectHeroBlazerSize('৩৮', this)" class="hero-blazer-btn py-2 rounded-xl border border-amber-500 bg-amber-500 text-white font-black transition text-center shadow-sm">
                     ৩৮
                   </button>
-                  <button type="button" onclick="selectHeroBlazerSize('৪০', this)" class="hero-blazer-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroBlazerSize('৪০', this)" class="hero-blazer-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৪০
                   </button>
-                  <button type="button" onclick="selectHeroBlazerSize('৪২', this)" class="hero-blazer-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroBlazerSize('৪২', this)" class="hero-blazer-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৪২
                   </button>
                 </div>
@@ -287,28 +324,28 @@
               <!-- 2. Pant Waist Selector (30 to 40) -->
               <div>
                 <div class="flex items-center justify-between text-xs mb-1.5">
-                  <span class="font-bold text-white flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> ২. প্যান্টের কোমর নির্বাচন করুন:
+                  <span class="font-bold text-slate-900 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> ২. প্যান্টের কোমর (Waist):
                   </span>
-                  <span id="selectedWaistLabel" class="text-[11px] text-emerald-400 font-bold">কোমর: ৩২"</span>
+                  <span id="selectedWaistLabel" class="text-[11px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">কোমর: ৩২"</span>
                 </div>
                 <div class="grid grid-cols-6 gap-1.5" id="heroPantWaistGrid">
-                  <button type="button" onclick="selectHeroPantWaist('৩০', this)" class="hero-pant-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroPantWaist('৩০', this)" class="hero-pant-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩০"
                   </button>
-                  <button type="button" onclick="selectHeroPantWaist('৩২', this)" class="hero-pant-btn py-1.5 rounded-lg border border-emerald-500 bg-emerald-500 text-royal-950 font-bold transition text-center shadow">
+                  <button type="button" onclick="selectHeroPantWaist('৩২', this)" class="hero-pant-btn py-2 rounded-xl border border-emerald-600 bg-emerald-600 text-white font-black transition text-center shadow-sm">
                     ৩২"
                   </button>
-                  <button type="button" onclick="selectHeroPantWaist('৩৪', this)" class="hero-pant-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroPantWaist('৩৪', this)" class="hero-pant-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩৪"
                   </button>
-                  <button type="button" onclick="selectHeroPantWaist('৩৬', this)" class="hero-pant-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroPantWaist('৩৬', this)" class="hero-pant-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩৬"
                   </button>
-                  <button type="button" onclick="selectHeroPantWaist('৩৮', this)" class="hero-pant-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroPantWaist('৩৮', this)" class="hero-pant-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৩৮"
                   </button>
-                  <button type="button" onclick="selectHeroPantWaist('৪০', this)" class="hero-pant-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center">
+                  <button type="button" onclick="selectHeroPantWaist('৪০', this)" class="hero-pant-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs">
                     ৪০"
                   </button>
                 </div>
@@ -317,37 +354,37 @@
             </div>
           </div>
 
-          <!-- DUAL WHATSAPP ORDER BUTTONS -->
+          <!-- DUAL WHATSAPP ORDER BUTTONS (Zero Lag, Touch Ergonomic) -->
           <div class="space-y-2">
-            <span class="text-[11px] text-gray-400 block text-center">যে কোনো একটি হোয়াটসঅ্যাপে ক্লিক করে অর্ডার পাঠান:</span>
+            <span class="text-[11px] text-slate-500 font-medium block text-center">যে কোনো একটি হোয়াটসঅ্যাপ নাম্বারে অর্ডার পাঠাতে ট্যাপ করুন:</span>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
               <!-- WhatsApp 1 -->
-              <a id="heroWhatsAppBtn1" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-royal-950 font-black py-3 px-3 rounded-2xl text-xs md:text-sm shadow-xl pulse-glow transition active:scale-[0.98]">
-                <i data-lucide="message-circle" class="w-4 h-4 fill-royal-950"></i>
-                <span>হোয়াটসঅ্যাপ ১ (01778)</span>
+              <a id="heroWhatsAppBtn1" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 font-black py-3 px-3 rounded-xl text-xs sm:text-sm shadow-md transition active:scale-95">
+                <i data-lucide="message-circle" class="w-4 h-4 fill-slate-950"></i>
+                <span>হোয়াটসঅ্যাপ ১ (01778-855772)</span>
               </a>
 
               <!-- WhatsApp 2 -->
-              <a id="heroWhatsAppBtn2" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:brightness-110 text-royal-950 font-black py-3 px-3 rounded-2xl text-xs md:text-sm shadow-xl transition active:scale-[0.98]">
-                <i data-lucide="message-circle" class="w-4 h-4 fill-royal-950"></i>
-                <span>হোয়াটসঅ্যাপ ২ (01874)</span>
+              <a id="heroWhatsAppBtn2" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-black py-3 px-3 rounded-xl text-xs sm:text-sm shadow-md transition active:scale-95">
+                <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                <span>হোয়াটসঅ্যাপ ২ (01874-338852)</span>
               </a>
             </div>
             
             <!-- Trust Footnotes -->
-            <div class="grid grid-cols-3 gap-2 mt-3 text-center text-[11px] text-gray-400">
+            <div class="grid grid-cols-3 gap-1 pt-2 text-center text-[10px] sm:text-[11px] text-slate-500 font-semibold border-t border-slate-100">
               <div class="flex items-center justify-center gap-1">
-                <i data-lucide="truck" class="w-3.5 h-3.5 text-gold-400"></i>
+                <i data-lucide="truck" class="w-3.5 h-3.5 text-amber-600"></i>
                 <span>সারা দেশে হোম ডেলিভারি</span>
               </div>
               <div class="flex items-center justify-center gap-1">
-                <i data-lucide="eye" class="w-3.5 h-3.5 text-gold-400"></i>
+                <i data-lucide="eye" class="w-3.5 h-3.5 text-amber-600"></i>
                 <span>দেখে পেমেন্ট</span>
               </div>
               <div class="flex items-center justify-center gap-1">
-                <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-gold-400"></i>
-                <span>সহজ এক্সচেঞ্জ</span>
+                <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-amber-600"></i>
+                <span>ফ্রি সাইজ এক্সচেঞ্জ</span>
               </div>
             </div>
           </div>
@@ -358,116 +395,126 @@
     </div>
   </section>
 
-  <!-- Deep Craftsmanship & Feature Deep-Dive Section -->
-  <section class="px-4 py-8 max-w-5xl mx-auto border-t border-gold-500/15">
-    <div class="text-center mb-6">
-      <h3 class="text-xl md:text-2xl font-bold text-white font-serif">কেন Suit Gallery-র ৩-পিস স্যুট সেরা?</h3>
-      <p class="text-xs md:text-sm text-gray-400 mt-1">এলিফ্যান্ট রোডের ঐতিহ্যবাহী নিখুঁত কাটিং ও কোয়ালিটি কন্ট্রোল</p>
+  <!-- Deep Craftsmanship & Feature Deep-Dive Section (Bright, Clean Cards) -->
+  <section class="px-3.5 py-6 max-w-5xl mx-auto content-auto">
+    <div class="text-center mb-5">
+      <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-serif">কেন Suit Gallery-র ৩-পিস স্যুট সেরা?</h3>
+      <p class="text-xs sm:text-sm text-slate-500 mt-1">এলিফ্যান্ট রোডের ঐতিহ্যবাহী নিখুঁত কাটিং ও কোয়ালিটি কন্ট্রোল</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-royal-900/90 border border-gold-500/20 rounded-2xl p-4 flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-3">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+      <div class="luxury-card p-4 flex flex-col items-center text-center">
+        <div class="w-12 h-12 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-2.5">
           <i data-lucide="sparkles" class="w-6 h-6"></i>
         </div>
-        <h4 class="text-base font-bold text-white mb-1">ইতালিয়ান উল ব্লেন্ড ফেব্রিক</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
+        <h4 class="text-base font-bold text-slate-900 mb-1">ইতালিয়ান উল ব্লেন্ড ফেব্রিক</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
           বিশেষ রিঙ্কেল-ফ্রি সুটিং ফেব্রিক যা দীর্ঘ সময় পরলেও কুঁচকে যায় না এবং শরীরে অত্যন্ত চমৎকার ব্রিদেবল আরাম দেয়।
         </p>
       </div>
 
-      <div class="bg-royal-900/90 border border-gold-500/20 rounded-2xl p-4 flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-3">
+      <div class="luxury-card p-4 flex flex-col items-center text-center">
+        <div class="w-12 h-12 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-2.5">
           <i data-lucide="scissors" class="w-6 h-6"></i>
         </div>
-        <h4 class="text-base font-bold text-white mb-1">ক্যানভাস শোল্ডার স্ট্রাকচার</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          মাস্টার টেইলারিংয়ের আধুনিক স্লিম ড্রপ-৬ কাট ও শক্ত শোল্ডার প্যাডিং—যা আপনার বডি শেপকে আরও চওড়া ও স্মার্ট দেখায়।
+        <h4 class="text-base font-bold text-slate-900 mb-1">ক্যানভাস শোল্ডার স্ট্রাকচার</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          মাস্টার টেইলারিংয়ের আধুনিক স্লিম ড্রপ-৬ কাট ও নিখুঁত শোল্ডার প্যাডিং—যা আপনার বডি শেপকে আরও স্মার্ট ও এলিগেন্ট দেখায়।
         </p>
       </div>
 
-      <div class="bg-royal-900/90 border border-gold-500/20 rounded-2xl p-4 flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-3">
+      <div class="luxury-card p-4 flex flex-col items-center text-center">
+        <div class="w-12 h-12 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-2.5">
           <i data-lucide="shield-check" class="w-6 h-6"></i>
         </div>
-        <h4 class="text-base font-bold text-white mb-1">ফ্রি সাইজ এক্সচেঞ্জ ও ট্রায়াল</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          বাসায় ট্রায়াল দিয়ে সাইজে বিন্দুমাত্র অমিল হলে সম্পূর্ণ ফ্রিতে সাইজ পরিবর্তন অথবা শোরুমে এসে নিজস্ব মাপে অল্টারেশনের সুযোগ।
+        <h4 class="text-base font-bold text-slate-900 mb-1">ফ্রি সাইজ এক্সচেঞ্জ ও ট্রায়াল</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          বাসায় ট্রায়াল দিয়ে সাইজে সামান্য অমিল হলেও ফ্রিতে সাইজ পরিবর্তন অথবা শোরুমে এসে নিখুঁত অল্টারেশনের শতভাগ নিশ্চয়তা।
         </p>
       </div>
     </div>
   </section>
 
   <!-- Complete Catalog Grid Section -->
-  <section class="px-4 py-8 max-w-5xl mx-auto">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+  <section id="catalogSection" class="px-3.5 py-6 max-w-5xl mx-auto content-auto">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-5">
       <div>
-        <h3 class="text-xl md:text-2xl font-bold text-white font-serif">সম্পূর্ণ ৩-পিস স্যুট ক্যাটালগ</h3>
-        <p class="text-xs text-gray-400">প্রতিটি সেটে রয়েছে: ব্লেজার কোট + ম্যাচিং ভেস্ট + ট্রাউজার</p>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-serif">সম্পূর্ণ ৩-পিস স্যুট ক্যাটালগ</h3>
+        <p class="text-xs sm:text-sm text-slate-500">প্রতিটি সেটে রয়েছে: ব্লেজার কোট + ম্যাচিং ভেস্ট + ট্রাউজার</p>
       </div>
 
       <!-- Category Filter Pills -->
       <div class="flex items-center gap-1.5 overflow-x-auto max-w-full pb-1 text-xs">
-        <button type="button" onclick="filterCategory('all', this)" class="cat-btn active-cat px-3.5 py-1.5 rounded-full bg-gold-500 text-royal-950 font-bold transition whitespace-nowrap">
+        <button type="button" onclick="filterCategory('all', this)" class="cat-btn active-cat px-3 py-1.5 rounded-full bg-amber-500 text-white font-bold transition whitespace-nowrap shadow-xs">
           সব কালেকশন (৫)
         </button>
-        <button type="button" onclick="filterCategory('wedding', this)" class="cat-btn px-3.5 py-1.5 rounded-full bg-royal-900 border border-gold-500/20 text-gray-300 font-medium hover:bg-royal-800 transition whitespace-nowrap">
+        <button type="button" onclick="filterCategory('wedding', this)" class="cat-btn px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition whitespace-nowrap">
           ওয়েডিং ও পার্টি
         </button>
-        <button type="button" onclick="filterCategory('corporate', this)" class="cat-btn px-3.5 py-1.5 rounded-full bg-royal-900 border border-gold-500/20 text-gray-300 font-medium hover:bg-royal-800 transition whitespace-nowrap">
+        <button type="button" onclick="filterCategory('corporate', this)" class="cat-btn px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition whitespace-nowrap">
           অফিস ও কর্পোরেট
         </button>
       </div>
     </div>
 
     <!-- The 5 Catalog Products Grid -->
-    <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-      <!-- Dynamic Javascript rendering will mount here with dual sizing and dual WhatsApp -->
+    <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+      <!-- Dynamic Javascript rendering with dual sizing and dual WhatsApp -->
     </div>
   </section>
 
-  <!-- Showroom Video Review Section (Shopnil Vlogs) -->
-  <section class="px-4 py-8 max-w-5xl mx-auto">
-    <div class="bg-gradient-to-br from-royal-900 via-royal-850 to-royal-900 border border-gold-500/30 rounded-3xl p-6 md:p-8">
-      <div class="text-center mb-6">
-        <div class="inline-flex items-center gap-1.5 text-gold-400 text-xs font-bold mb-1">
+  <!-- Showroom Video Review Section with Zero-Lag Facade Player -->
+  <section class="px-3.5 py-6 max-w-5xl mx-auto content-auto">
+    <div class="luxury-card p-4 sm:p-6 border border-amber-200/80 shadow-md bg-white">
+      <div class="text-center mb-4">
+        <div class="inline-flex items-center gap-1.5 text-amber-700 text-xs font-bold mb-1">
           <i data-lucide="video" class="w-4 h-4"></i> শোরুম ভিডিও রিভিউ
         </div>
-        <h3 class="text-xl md:text-2xl font-bold text-white font-serif">ভিডিওতে দেখুন শোরুম ও কাপড়ের ফিনিশিং</h3>
-        <p class="text-xs text-gray-400 mt-1">Shopnil Vlogs-এর অফিসিয়াল এলিফ্যান্ট রোড শোরুম রিভিউ ও স্যুট কোয়ালিটি টেস্ট</p>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-serif">ভিডিওতে দেখুন শোরুম ও কাপড়ের ফিনিশিং</h3>
+        <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Shopnil Vlogs-এর অফিসিয়াল এলিফ্যান্ট রোড শোরুম রিভিউ ও স্যুট কোয়ালিটি টেস্ট</p>
       </div>
 
-      <div class="relative aspect-video rounded-2xl overflow-hidden border border-gold-500/30 shadow-2xl max-w-3xl mx-auto">
-        <iframe src="https://www.youtube-nocookie.com/embed/-Q5veJiLvPw?rel=0" title="Suit Gallery Clothing House Showroom Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full border-0"></iframe>
+      <!-- Lightweight Facade Player (Saves 2.5MB JS & Eliminates Scroll Stutter) -->
+      <div id="videoContainer" class="relative aspect-video rounded-2xl overflow-hidden border border-slate-200 shadow-md max-w-3xl mx-auto bg-slate-900 cursor-pointer group" onclick="loadYouTubeVideo()">
+        <img src="images/yt_thumb.webp" alt="Suit Gallery Showroom Video" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" loading="lazy">
+        
+        <div class="absolute inset-0 bg-black/30 flex flex-col items-center justify-center gap-2 group-hover:bg-black/20 transition">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+            <i data-lucide="play" class="w-7 h-7 fill-white ml-1"></i>
+          </div>
+          <span class="bg-black/75 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+            ▶ ভিডিও দেখতে এখানে ট্যাপ করুন
+          </span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Showroom Location & Direct Contact -->
-  <section class="px-4 py-8 max-w-5xl mx-auto">
-    <div class="bg-gradient-to-br from-royal-900 via-royal-850 to-royal-900 border border-gold-500/30 rounded-3xl p-6 md:p-8 relative overflow-hidden">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+  <section class="px-3.5 py-6 max-w-5xl mx-auto content-auto">
+    <div class="luxury-card p-5 sm:p-8 bg-gradient-to-br from-amber-50/70 via-white to-amber-50/40 border border-amber-200">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-5">
         <div>
-          <div class="inline-flex items-center gap-1.5 text-gold-400 text-xs font-bold mb-2">
+          <div class="inline-flex items-center gap-1.5 text-amber-700 text-xs font-bold mb-1.5">
             <i data-lucide="map-pin" class="w-4 h-4"></i> এলিফ্যান্ট রোড শোরুম
           </div>
-          <h3 class="text-2xl font-bold text-white font-serif">সরাসরি শোরুমে এসে ট্রায়াল দিন</h3>
-          <p class="text-xs md:text-sm text-gray-300 mt-2 max-w-lg leading-relaxed">
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-serif">সরাসরি শোরুমে এসে ট্রায়াল দিন</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-lg leading-relaxed">
             শপ নং ৫০/১৩ (গ্রাউন্ড ফ্লোর), হাজী জয়নাল ভবন, নিউ এলিফ্যান্ট রোড, ঢাকা-১২০৫।
           </p>
-          <div class="flex flex-wrap items-center gap-4 mt-3 text-xs text-gray-300 font-medium">
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-2.5 text-xs text-slate-700 font-semibold">
             <span>⏰ প্রতিদিন সকাল ১০:০০ টা - রাত ৯:০০ টা</span>
-            <span class="text-gold-400 font-mono">📞 01778-855772</span>
-            <span class="text-gold-400 font-mono">📞 01874-338852</span>
+            <span class="text-amber-800 font-mono">📞 01778-855772</span>
+            <span class="text-amber-800 font-mono">📞 01874-338852</span>
           </div>
         </div>
-        <div class="flex flex-col sm:flex-row gap-2.5 w-full md:w-auto">
-          <a href="https://wa.me/8801778855772" target="_blank" class="flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-royal-950 px-5 py-3 rounded-xl text-xs font-black shadow-lg transition">
-            <i data-lucide="message-circle" class="w-4 h-4 fill-royal-950"></i>
+        <div class="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
+          <a href="https://wa.me/8801778855772" target="_blank" class="flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 px-4 py-2.5 rounded-xl text-xs font-black shadow-sm transition active:scale-95">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-slate-950"></i>
             <span>হোয়াটসঅ্যাপ ১</span>
           </a>
-          <a href="https://wa.me/8801874338852" target="_blank" class="flex items-center justify-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:brightness-110 text-royal-950 px-5 py-3 rounded-xl text-xs font-black shadow-lg transition">
-            <i data-lucide="message-circle" class="w-4 h-4 fill-royal-950"></i>
+          <a href="https://wa.me/8801874338852" target="_blank" class="flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:brightness-105 text-white px-4 py-2.5 rounded-xl text-xs font-black shadow-sm transition active:scale-95">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
             <span>হোয়াটসঅ্যাপ ২</span>
           </a>
         </div>
@@ -475,64 +522,64 @@
     </div>
   </section>
 
-  <!-- Minimalist Discreet CryptoWebBuild Credit -->
-  <footer class="text-center py-8 text-xs text-gray-500 border-t border-gold-500/10">
+  <!-- Discreet Attribution Footer -->
+  <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-200">
     <p>© 2026 Suit Gallery Clothing House. সর্বস্বত্ব সংরক্ষিত।</p>
-    <p class="mt-1 text-[11px] text-gray-400">
-      Concept & Digital Showcase by <a href="https://cryptowebbuild.com" target="_blank" class="text-gold-400 hover:underline">CryptoWebBuild.com</a> • WhatsApp: <a href="https://wa.me/8801977052842" class="text-gray-300">01977052842</a>
+    <p class="mt-1 text-[11px] text-slate-500">
+      Showcase by <a href="https://cryptowebbuild.com" target="_blank" class="text-amber-600 font-bold hover:underline">CryptoWebBuild.com</a> • WhatsApp: <a href="https://wa.me/8801977052842" class="text-slate-700 font-semibold">01977052842</a>
     </p>
   </footer>
 
-  <!-- Mobile Sticky Footer Action Bar (Dual WhatsApp Ready) -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 badge-blur border-t border-gold-500/30 p-2.5 md:hidden">
-    <div class="flex items-center gap-2 max-w-md mx-auto">
-      <a href="tel:01778855772" class="flex-1 flex items-center justify-center gap-1 bg-royal-900 border border-gold-500/30 text-gold-300 py-2.5 rounded-xl text-xs font-bold">
+  <!-- Mobile Sticky Footer Action Bar (Zero-Lag Solid Design) -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 solid-bottom-bar p-2 md:hidden">
+    <div class="flex items-center gap-1.5 max-w-md mx-auto">
+      <a href="tel:01778855772" class="flex-1 flex items-center justify-center gap-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 py-2.5 rounded-xl text-xs font-bold transition active:scale-95">
         <i data-lucide="phone" class="w-3.5 h-3.5"></i>
         <span>কল</span>
       </a>
-      <a id="stickyOrderBtn1" href="#" target="_blank" class="flex-[2] flex items-center justify-center gap-1 bg-[#25D366] text-royal-950 py-2.5 rounded-xl text-xs font-black shadow-lg">
-        <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-royal-950"></i>
+      <a id="stickyOrderBtn1" href="#" target="_blank" class="flex-[2] flex items-center justify-center gap-1 bg-[#25D366] text-slate-950 py-2.5 rounded-xl text-xs font-black shadow-sm transition active:scale-95">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-slate-950"></i>
         <span>অর্ডার ১ (01778)</span>
       </a>
-      <a id="stickyOrderBtn2" href="#" target="_blank" class="flex-[2] flex items-center justify-center gap-1 bg-gradient-to-r from-gold-500 to-gold-600 text-royal-950 py-2.5 rounded-xl text-xs font-black shadow-lg">
-        <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-royal-950"></i>
+      <a id="stickyOrderBtn2" href="#" target="_blank" class="flex-[2] flex items-center justify-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 text-white py-2.5 rounded-xl text-xs font-black shadow-sm transition active:scale-95">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-white"></i>
         <span>অর্ডার ২ (01874)</span>
       </a>
     </div>
   </div>
 
   <!-- Size Guide Modal -->
-  <div id="sizeModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-royal-900 border border-gold-500/30 rounded-2xl p-5 max-w-sm w-full text-center relative shadow-2xl">
-      <button onclick="closeSizeGuide()" class="absolute top-3 right-3 text-gray-400 hover:text-white">
+  <div id="sizeModal" class="fixed inset-0 z-50 bg-slate-950/70 hidden items-center justify-center p-3 sm:p-4" onclick="if(event.target===this) closeSizeGuide()">
+    <div class="bg-white border border-slate-200 rounded-2xl p-5 max-w-sm w-full text-center relative shadow-2xl">
+      <button onclick="closeSizeGuide()" class="absolute top-3 right-3 text-slate-400 hover:text-slate-800 p-1">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-      <div class="w-10 h-10 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mx-auto mb-2">
+      <div class="w-10 h-10 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mx-auto mb-2">
         <i data-lucide="ruler" class="w-5 h-5"></i>
       </div>
-      <h4 class="text-base font-bold text-white mb-1">৩-পিস স্যুট সাইজ চার্ট (ইঞ্চি)</h4>
-      <p class="text-xs text-gray-400 mb-3">ব্লেজার বুক (৩২-৪২) ও প্যান্টের কোমর (৩০-৪০)</p>
+      <h4 class="text-base font-bold text-slate-900 mb-0.5">৩-পিস স্যুট সাইজ চার্ট (ইঞ্চি)</h4>
+      <p class="text-xs text-slate-500 mb-3">ব্লেজার বুক (৩২-৪২) ও প্যান্টের কোমর (৩০-৪০)</p>
       
       <div class="overflow-x-auto">
         <table class="w-full text-xs text-left border-collapse">
           <thead>
-            <tr class="border-b border-gold-500/30 text-gold-400 font-bold">
+            <tr class="border-b border-amber-200 text-amber-800 font-bold bg-amber-50/50">
               <th class="py-1.5 px-2">ব্লেজার সাইজ</th>
               <th class="py-1.5 px-2">বুক (Chest)</th>
               <th class="py-1.5 px-2">প্যান্ট কোমর (Waist)</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gold-500/10 text-gray-300">
-            <tr><td class="py-1.5 px-2 font-bold text-white">৩২</td><td class="py-1.5 px-2">৩২" - ৩৩"</td><td class="py-1.5 px-2">৩০"</td></tr>
-            <tr><td class="py-1.5 px-2 font-bold text-white">৩৪</td><td class="py-1.5 px-2">৩৪" - ৩৫"</td><td class="py-1.5 px-2">৩২"</td></tr>
-            <tr><td class="py-1.5 px-2 font-bold text-white">৩৬</td><td class="py-1.5 px-2">৩৬" - ৩৭"</td><td class="py-1.5 px-2">৩৪"</td></tr>
-            <tr><td class="py-1.5 px-2 font-bold text-white">৩৮</td><td class="py-1.5 px-2">৩৮" - ৩৯"</td><td class="py-1.5 px-2">৩৬"</td></tr>
-            <tr><td class="py-1.5 px-2 font-bold text-white">৪০</td><td class="py-1.5 px-2">৪০" - ৪১"</td><td class="py-1.5 px-2">৩৮"</td></tr>
-            <tr><td class="py-1.5 px-2 font-bold text-white">৪২</td><td class="py-1.5 px-2">৪২" - ৪৩"</td><td class="py-1.5 px-2">৪০"</td></tr>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr><td class="py-1.5 px-2 font-bold text-slate-900">৩২</td><td class="py-1.5 px-2">৩২" - ৩৩"</td><td class="py-1.5 px-2">৩০"</td></tr>
+            <tr><td class="py-1.5 px-2 font-bold text-slate-900">৩৪</td><td class="py-1.5 px-2">৩৪" - ৩৫"</td><td class="py-1.5 px-2">৩২"</td></tr>
+            <tr><td class="py-1.5 px-2 font-bold text-slate-900">৩৬</td><td class="py-1.5 px-2">৩৬" - ৩৭"</td><td class="py-1.5 px-2">৩৪"</td></tr>
+            <tr><td class="py-1.5 px-2 font-bold text-slate-900">৩৮</td><td class="py-1.5 px-2">৩৮" - ৩৯"</td><td class="py-1.5 px-2">৩৬"</td></tr>
+            <tr><td class="py-1.5 px-2 font-bold text-slate-900">৪০</td><td class="py-1.5 px-2">৪০" - ৪১"</td><td class="py-1.5 px-2">৩৮"</td></tr>
+            <tr><td class="py-1.5 px-2 font-bold text-slate-900">৪২</td><td class="py-1.5 px-2">৪২" - ৪৩"</td><td class="py-1.5 px-2">৪০"</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-[10px] text-gold-300 mt-3">💡 নোট: আপনার নিজস্ব বিশেষ মাপে বানাতে চাইলে শোরুমে এসে ট্রায়াল দিতে পারেন।</p>
+      <p class="text-[10px] text-amber-700 font-semibold mt-3">💡 নোট: আপনার বিশেষ মাপে বানাতে চাইলে শোরুমে এসে নিজস্ব মাপে বানিয়ে নিতে পারেন।</p>
     </div>
   </div>
 
@@ -638,9 +685,9 @@
       heroProduct.code = code;
 
       document.querySelectorAll('.spotlight-thumb').forEach(b => {
-        b.className = 'spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group';
+        b.className = 'spotlight-thumb aspect-video rounded-xl overflow-hidden border border-slate-200 hover:border-amber-400 transition relative';
       });
-      btn.className = 'spotlight-thumb active-thumb aspect-video rounded-xl overflow-hidden border-2 border-gold-400 shadow-md relative group';
+      btn.className = 'spotlight-thumb active-thumb aspect-video rounded-xl overflow-hidden border-2 border-amber-500 transition relative';
 
       updateHeroWhatsAppLink();
     }
@@ -649,9 +696,9 @@
       heroProduct.selectedBlazer = size;
       const parent = document.getElementById('heroBlazerSizeGrid');
       parent.querySelectorAll('button').forEach(b => {
-        b.className = 'hero-blazer-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center';
+        b.className = 'hero-blazer-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs';
       });
-      btn.className = 'hero-blazer-btn py-1.5 rounded-lg border border-gold-500 bg-gold-500 text-royal-950 font-bold transition text-center shadow';
+      btn.className = 'hero-blazer-btn py-2 rounded-xl border border-amber-500 bg-amber-500 text-white font-black transition text-center shadow-sm';
       updateHeroWhatsAppLink();
     }
 
@@ -660,9 +707,9 @@
       document.getElementById('selectedWaistLabel').innerText = 'কোমর: ' + waist + '"';
       const parent = document.getElementById('heroPantWaistGrid');
       parent.querySelectorAll('button').forEach(b => {
-        b.className = 'hero-pant-btn py-1.5 rounded-lg border border-gold-500/20 text-xs font-semibold bg-royal-800 text-gray-200 hover:bg-royal-700 transition text-center';
+        b.className = 'hero-pant-btn py-2 rounded-xl border border-slate-200 text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 transition text-center shadow-xs';
       });
-      btn.className = 'hero-pant-btn py-1.5 rounded-lg border border-emerald-500 bg-emerald-500 text-royal-950 font-bold transition text-center shadow';
+      btn.className = 'hero-pant-btn py-2 rounded-xl border border-emerald-600 bg-emerald-600 text-white font-black transition text-center shadow-sm';
       updateHeroWhatsAppLink();
     }
 
@@ -691,10 +738,9 @@
         prod.selectedBlazer = size;
         const parent = btn.parentElement;
         parent.querySelectorAll('button').forEach(b => {
-          b.className = 'w-6 h-6 rounded text-[10px] border border-gold-500/20 bg-royal-800 text-gray-300 font-medium';
+          b.className = 'py-1 px-1.5 rounded-lg text-[10px] border border-slate-200 bg-white text-slate-700 font-bold';
         });
-        btn.className = 'w-6 h-6 rounded text-[10px] border border-gold-500 bg-gold-500 text-royal-950 font-bold';
-        
+        btn.className = 'py-1 px-1.5 rounded-lg text-[10px] border border-amber-500 bg-amber-500 text-white font-black shadow-xs';
         updateCatalogCardButtons(prod);
       }
     }
@@ -705,10 +751,9 @@
         prod.selectedWaist = waist;
         const parent = btn.parentElement;
         parent.querySelectorAll('button').forEach(b => {
-          b.className = 'w-6 h-6 rounded text-[10px] border border-emerald-500/20 bg-royal-800 text-gray-300 font-medium';
+          b.className = 'py-1 px-1.5 rounded-lg text-[10px] border border-slate-200 bg-white text-slate-700 font-bold';
         });
-        btn.className = 'w-6 h-6 rounded text-[10px] border border-emerald-500 bg-emerald-500 text-royal-950 font-bold';
-        
+        btn.className = 'py-1 px-1.5 rounded-lg text-[10px] border border-emerald-600 bg-emerald-600 text-white font-black shadow-xs';
         updateCatalogCardButtons(prod);
       }
     }
@@ -729,36 +774,36 @@
         const link2 = 'https://wa.me/' + WA_PHONE_2 + '?text=' + msg;
 
         return `
-        <div class="bg-royal-900/90 rounded-2xl border border-gold-500/20 overflow-hidden shadow-lg hover:border-gold-500/50 transition duration-300 flex flex-col justify-between">
-          <div class="relative aspect-[10/11] bg-royal-950 overflow-hidden group">
-            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
-            <div class="absolute top-2.5 left-2.5 bg-gold-500 text-royal-950 text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+        <div class="luxury-card overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between bg-white">
+          <div class="relative aspect-[10/11] bg-slate-50 overflow-hidden group">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-102 transition duration-300" loading="lazy">
+            <div class="absolute top-2.5 left-2.5 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs">
               ${p.badge}
             </div>
-            <div class="absolute top-2.5 right-2.5 bg-black/75 text-gold-300 text-[10px] font-mono px-2 py-0.5 rounded border border-gold-500/30">
+            <div class="absolute top-2.5 right-2.5 bg-white/95 text-slate-800 text-[10px] font-mono font-bold px-2 py-0.5 rounded border border-slate-200 shadow-xs">
               #${p.code}
             </div>
           </div>
 
           <div class="p-3.5 flex-1 flex flex-col justify-between">
             <div>
-              <h4 class="text-sm font-bold text-white line-clamp-1 mb-0.5">${p.title}</h4>
-              <p class="text-[11px] text-gold-300 font-medium mb-1.5">${p.subtitle}</p>
+              <h4 class="text-sm font-bold text-slate-900 line-clamp-1 mb-0.5">${p.title}</h4>
+              <p class="text-[11px] text-amber-700 font-semibold mb-1.5">${p.subtitle}</p>
               
               <div class="flex items-baseline gap-2 mb-2">
-                <span class="text-base font-bold text-gold-400 font-serif">${p.price}</span>
-                <span class="text-[11px] text-gray-500 line-through">${p.oldPrice}</span>
-                <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-1.5 py-0.5 rounded font-bold">সেভ ৳১,০০০</span>
+                <span class="text-base font-black text-amber-700 font-serif">${p.price}</span>
+                <span class="text-[11px] text-slate-400 line-through">${p.oldPrice}</span>
+                <span class="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-1.5 py-0.2 rounded font-bold">সেভ ৳১,০০০</span>
               </div>
 
               <!-- Dual Sizing Matrix on Card -->
-              <div class="space-y-1.5 mb-3 bg-royal-950/70 p-2 rounded-xl border border-gold-500/10">
+              <div class="space-y-1.5 mb-3 bg-slate-50 p-2 rounded-xl border border-slate-200">
                 <!-- Blazer Size (32-42) -->
                 <div class="flex items-center justify-between">
-                  <span class="text-[10px] text-gray-300 font-semibold">ব্লেজার (বুক):</span>
+                  <span class="text-[10px] text-slate-700 font-bold">ব্লেজার (বুক):</span>
                   <div class="flex items-center gap-1">
                     ${p.blazerSizes.map(s => `
-                      <button type="button" onclick="selectCatalogBlazer(${p.id}, '${s}', this)" class="w-6 h-6 rounded text-[10px] border ${s === p.selectedBlazer ? 'border-gold-500 bg-gold-500 text-royal-950 font-bold' : 'border-gold-500/20 bg-royal-800 text-gray-300 font-medium'}">
+                      <button type="button" onclick="selectCatalogBlazer(${p.id}, '${s}', this)" class="py-1 px-1.5 rounded-lg text-[10px] border ${s === p.selectedBlazer ? 'border-amber-500 bg-amber-500 text-white font-black' : 'border-slate-200 bg-white text-slate-700 font-bold'}">
                         ${s}
                       </button>
                     `).join('')}
@@ -767,10 +812,10 @@
 
                 <!-- Pant Waist (30-40) -->
                 <div class="flex items-center justify-between">
-                  <span class="text-[10px] text-gray-300 font-semibold">প্যান্টের কোমর:</span>
+                  <span class="text-[10px] text-slate-700 font-bold">প্যান্ট কোমর:</span>
                   <div class="flex items-center gap-1">
                     ${p.pantWaists.map(w => `
-                      <button type="button" onclick="selectCatalogWaist(${p.id}, '${w}', this)" class="w-6 h-6 rounded text-[10px] border ${w === p.selectedWaist ? 'border-emerald-500 bg-emerald-500 text-royal-950 font-bold' : 'border-emerald-500/20 bg-royal-800 text-gray-300 font-medium'}">
+                      <button type="button" onclick="selectCatalogWaist(${p.id}, '${w}', this)" class="py-1 px-1.5 rounded-lg text-[10px] border ${w === p.selectedWaist ? 'border-emerald-600 bg-emerald-600 text-white font-black' : 'border-slate-200 bg-white text-slate-700 font-bold'}">
                         ${w}
                       </button>
                     `).join('')}
@@ -781,12 +826,12 @@
 
             <!-- Dual WhatsApp Order Buttons on Each Card -->
             <div class="grid grid-cols-2 gap-1.5">
-              <a id="catOrderBtn1-${p.id}" href="${link1}" target="_blank" class="flex items-center justify-center gap-1 bg-[#25D366] hover:bg-[#20ba5a] text-royal-950 font-bold py-2 rounded-xl text-[11px] transition shadow">
-                <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-royal-950"></i>
+              <a id="catOrderBtn1-${p.id}" href="${link1}" target="_blank" class="flex items-center justify-center gap-1 bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 font-bold py-2 rounded-xl text-[11px] transition shadow-xs active:scale-95">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-slate-950"></i>
                 <span>হোয়াটসঅ্যাপ ১</span>
               </a>
-              <a id="catOrderBtn2-${p.id}" href="${link2}" target="_blank" class="flex items-center justify-center gap-1 bg-gradient-to-r from-gold-500 to-gold-600 hover:brightness-110 text-royal-950 font-bold py-2 rounded-xl text-[11px] transition shadow">
-                <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-royal-950"></i>
+              <a id="catOrderBtn2-${p.id}" href="${link2}" target="_blank" class="flex items-center justify-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 hover:brightness-105 text-white font-bold py-2 rounded-xl text-[11px] transition shadow-xs active:scale-95">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-white"></i>
                 <span>হোয়াটসঅ্যাপ ২</span>
               </a>
             </div>
@@ -800,9 +845,9 @@
 
     function filterCategory(cat, btn) {
       document.querySelectorAll('.cat-btn').forEach(b => {
-        b.className = 'cat-btn px-3.5 py-1.5 rounded-full bg-royal-900 border border-gold-500/20 text-gray-300 font-medium hover:bg-royal-800 transition whitespace-nowrap';
+        b.className = 'cat-btn px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition whitespace-nowrap';
       });
-      btn.className = 'cat-btn active-cat px-3.5 py-1.5 rounded-full bg-gold-500 text-royal-950 font-bold transition whitespace-nowrap';
+      btn.className = 'cat-btn active-cat px-3 py-1.5 rounded-full bg-amber-500 text-white font-bold transition whitespace-nowrap shadow-xs';
 
       if (cat === 'all') {
         renderCatalog(catalogProducts);
@@ -810,6 +855,14 @@
         const filtered = catalogProducts.filter(p => p.category === cat);
         renderCatalog(filtered);
       }
+    }
+
+    // Lazy load YouTube iframe on click (eliminates initial 2.5MB payload & phone lag)
+    function loadYouTubeVideo() {
+      const container = document.getElementById('videoContainer');
+      container.innerHTML = `
+        <iframe src="https://www.youtube-nocookie.com/embed/-Q5veJiLvPw?autoplay=1&rel=0" title="Suit Gallery Clothing House Showroom Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full border-0"></iframe>
+      `;
     }
 
     function openSizeGuide() {
