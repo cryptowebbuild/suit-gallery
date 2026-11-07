@@ -93,8 +93,8 @@
   <header class="sticky top-0 z-50 badge-blur border-b border-gold-500/20 px-4 py-3">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-gold-400 via-gold-500 to-gold-700 flex items-center justify-center text-royal-950 font-serif font-black text-xl shadow-lg ring-2 ring-gold-400/40">
-          SG
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-gold-500/40 shadow-lg ring-2 ring-gold-400/30 flex-shrink-0 bg-royal-950 flex items-center justify-center">
+          <img src="images/logo_badge.webp" alt="Suit Gallery Emblem" class="w-full h-full object-cover">
         </div>
         <div>
           <div class="flex items-center gap-2">
@@ -136,36 +136,67 @@
       </p>
     </div>
 
+    <!-- Grand Showcase Display: 5-Suit Royal Studio Lineup -->
+    <div class="relative rounded-3xl overflow-hidden border border-gold-500/30 shadow-2xl mb-8 group bg-royal-950">
+      <img src="images/hero_lineup.webp" alt="Suit Gallery 5-Suit Royal Studio Collection" class="w-full h-auto object-cover group-hover:scale-[1.01] transition duration-700">
+      <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/20 to-transparent flex flex-col justify-end p-4 md:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500 text-royal-950 text-xs font-black shadow mb-2">
+              <i data-lucide="crown" class="w-3.5 h-3.5"></i>
+              <span>সিগনেচার ৫-কালার ড্রপ ২০২৬</span>
+            </div>
+            <h3 class="text-lg md:text-2xl font-black text-white font-serif leading-tight">
+              চারকোল গ্রে • মিডনাইট নেভি • রয়্যাল ব্লু • ডিপ ওয়াইন • ক্লাসিক ব্ল্যাক
+            </h3>
+            <p class="text-xs md:text-sm text-gold-300 font-medium mt-1">
+              কমপ্লিট ৩-পিস স্যুট (ব্লেজার কোট + ভেস্ট + ট্রাউজার) মাত্র ৩,৫০০ টাকায়!
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="#catalogGrid" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:brightness-110 text-royal-950 font-bold px-4 py-2.5 rounded-xl text-xs shadow-lg transition">
+              <span>ক্যাটালগ দেখুন</span>
+              <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Spotlight Product Showcase Card -->
     <div class="bg-gradient-to-br from-royal-900 via-royal-850 to-royal-900 border border-gold-500/30 rounded-3xl p-4 md:p-6 shadow-2xl gold-card-glow">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         
         <!-- Interactive Gallery (Left Column) -->
         <div class="lg:col-span-6 flex flex-col gap-3">
-          <div class="relative aspect-[3/4] bg-royal-950 rounded-2xl overflow-hidden border border-gold-500/25 shadow-inner">
+          <div class="relative aspect-[10/11] bg-royal-950 rounded-2xl overflow-hidden border border-gold-500/25 shadow-inner">
             <img id="mainSpotlightImg" src="images/suit_grey.webp" alt="Suit Gallery Premium 3-Piece" class="w-full h-full object-cover transition-opacity duration-300">
             
             <div class="absolute top-3 left-3 bg-gradient-to-r from-gold-500 to-gold-600 text-royal-950 text-xs font-black px-3 py-1 rounded-full shadow-lg">
               ✨ অফিশিয়াল সিগনেচার
             </div>
-            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur text-gold-300 text-xs font-mono px-3 py-1 rounded-lg border border-gold-500/30">
+            <div id="spotlightCode" class="absolute bottom-3 right-3 bg-black/80 backdrop-blur text-gold-300 text-xs font-mono px-3 py-1 rounded-lg border border-gold-500/30">
               #SG-ROYAL-01
             </div>
           </div>
 
           <!-- Thumbnail Switcher Buttons -->
-          <div class="grid grid-cols-3 gap-2">
+          <div class="grid grid-cols-4 gap-2">
             <button type="button" onclick="switchSpotlight('images/suit_grey.webp', 'The Mayfair Charcoal Grey', '#SG-ROYAL-01', this)" class="spotlight-thumb active-thumb aspect-video rounded-xl overflow-hidden border-2 border-gold-400 shadow-md relative group">
               <img src="images/suit_grey.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[10px] text-white font-bold">চারকোল গ্রে</div>
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">চারকোল গ্রে</div>
             </button>
             <button type="button" onclick="switchSpotlight('images/suit_maroon.webp', 'The Bordeaux Tuscan Wine', '#SG-ROYAL-02', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group">
               <img src="images/suit_maroon.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[10px] text-white font-bold">ডিপ ওয়াইন</div>
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">ডিপ ওয়াইন</div>
+            </button>
+            <button type="button" onclick="switchSpotlight('images/hero_lineup.webp', 'Suit Gallery 5-Color Royal Lineup', '#SG-ROYAL-ALL', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group">
+              <img src="images/hero_lineup.webp" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">৫-কালার সেট</div>
             </button>
             <button type="button" onclick="switchSpotlight('images/suit_black.webp', 'The Savile Jet Black', '#SG-ROYAL-03', this)" class="spotlight-thumb aspect-video rounded-xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition relative group">
               <img src="images/suit_black.webp" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[10px] text-white font-bold">জেট ব্ল্যাক</div>
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-[9px] sm:text-[10px] text-white font-bold">জেট ব্ল্যাক</div>
             </button>
           </div>
         </div>
@@ -601,6 +632,8 @@
     function switchSpotlight(imgSrc, title, code, btn) {
       document.getElementById('mainSpotlightImg').src = imgSrc;
       document.getElementById('spotlightTitle').innerText = title;
+      const codeEl = document.getElementById('spotlightCode');
+      if (codeEl) codeEl.innerText = code;
       heroProduct.title = title;
       heroProduct.code = code;
 
@@ -697,7 +730,7 @@
 
         return `
         <div class="bg-royal-900/90 rounded-2xl border border-gold-500/20 overflow-hidden shadow-lg hover:border-gold-500/50 transition duration-300 flex flex-col justify-between">
-          <div class="relative aspect-[3/4] bg-royal-950 overflow-hidden group">
+          <div class="relative aspect-[10/11] bg-royal-950 overflow-hidden group">
             <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
             <div class="absolute top-2.5 left-2.5 bg-gold-500 text-royal-950 text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
               ${p.badge}
